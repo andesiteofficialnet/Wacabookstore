@@ -1,0 +1,428 @@
+:root{
+    --ink:#211C16;
+    --paper:#F7F1E6;
+    --paper-alt:#EFE4D2;
+    --brown:#3A2A1B;
+    --cream-line: rgba(33,28,22,0.16);
+    --shadow: 0 10px 30px rgba(33,24,15,0.14);
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Literata', serif;
+    font-size:1.02rem;
+    line-height:1.65;
+  }
+
+  h1,h2,h3,h4,.display-font{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    letter-spacing:-0.01em;
+    color:var(--ink);
+  }
+
+  .mono{
+    font-family:'Space Mono', monospace;
+    letter-spacing:0.04em;
+  }
+
+  .eyebrow{
+    font-family:'Space Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--brown);
+  }
+
+  a{color:var(--brown);}
+
+  /* ---------- Stamp badge (motif index kartu perpustakaan) ---------- */
+  .stamp{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border:1.5px solid currentColor;
+    border-radius:50%;
+    padding:.35em .7em;
+    transform:rotate(-6deg);
+    font-family:'Space Mono', monospace;
+    font-size:.66rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--brown);
+    opacity:.85;
+  }
+
+  /* ---------- Navbar ---------- */
+  .navbar-katalog{
+    background:var(--paper);
+    border-bottom:1px solid var(--cream-line);
+  }
+  .navbar-katalog .navbar-brand{
+    font-family:'Fraunces', serif;
+    font-weight:700;
+    font-size:1.4rem;
+    color:var(--ink)!important;
+  }
+  .navbar-katalog .navbar-brand span{color:var(--brown);}
+  .navbar-katalog .nav-link{
+    font-family:'Space Mono', monospace;
+    font-size:.78rem;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--ink)!important;
+    margin:0 .6rem;
+    opacity:.75;
+  }
+  .navbar-katalog .nav-link:hover{opacity:1; color:var(--brown)!important;}
+  .btn-katalog-cart{
+    border:1.5px solid var(--ink);
+    background:transparent;
+    color:var(--ink);
+    font-family:'Space Mono', monospace;
+    font-size:.75rem;
+    letter-spacing:.06em;
+    padding:.4rem .9rem;
+    border-radius:0;
+  }
+  .btn-katalog-cart:hover{background:var(--ink); color:var(--paper);}
+
+  /* ---------- Buttons ---------- */
+  .btn-ink{
+    background:var(--ink);
+    color:var(--paper);
+    border:1.5px solid var(--ink);
+    border-radius:0;
+    font-family:'Space Mono', monospace;
+    font-size:.8rem;
+    letter-spacing:.06em;
+    padding:.72rem 1.5rem;
+    text-transform:uppercase;
+    transition:all .25s ease;
+  }
+  .btn-ink:hover{background:var(--paper); color:var(--ink);}
+  .btn-outline-ink{
+    background:transparent;
+    color:var(--ink);
+    border:1.5px solid var(--ink);
+    border-radius:0;
+    font-family:'Space Mono', monospace;
+    font-size:.8rem;
+    letter-spacing:.06em;
+    padding:.7rem 1.5rem;
+    text-transform:uppercase;
+    transition:all .25s ease;
+  }
+  .btn-outline-ink:hover{background:var(--ink); color:var(--paper);}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    padding-top:7.5rem;
+    padding-bottom:4rem;
+    overflow:hidden;
+  }
+  .hero h1{
+    font-size:clamp(2.6rem, 5.4vw, 4.6rem);
+    line-height:1.02;
+  }
+  .hero-lead{
+    max-width:34ch;
+    color:var(--brown);
+    font-size:1.12rem;
+  }
+
+  /* library card panel */
+  .library-card{
+    background:var(--paper-alt);
+    border:1.5px solid var(--ink);
+    padding:1.4rem 1.6rem;
+    position:relative;
+    max-width:420px;
+  }
+  .library-card::before{
+    content:"";
+    position:absolute;
+    top:14px; left:-7px;
+    width:14px; height:14px;
+    background:var(--paper);
+    border:1.5px solid var(--ink);
+    border-radius:50%;
+  }
+  .library-card::after{
+    content:"";
+    position:absolute;
+    bottom:14px; left:-7px;
+    width:14px; height:14px;
+    background:var(--paper);
+    border:1.5px solid var(--ink);
+    border-radius:50%;
+  }
+  .library-card dl{
+    display:grid;
+    grid-template-columns:auto 1fr;
+    column-gap:.8rem;
+    row-gap:.55rem;
+    margin:0;
+    font-family:'Space Mono', monospace;
+    font-size:.78rem;
+  }
+  .library-card dt{color:var(--brown); text-transform:uppercase; letter-spacing:.06em;}
+  .library-card dd{margin:0; border-bottom:1px dotted var(--cream-line); padding-bottom:.35rem;}
+
+  /* Bookshelf illustration (spines built from type) */
+  .bookshelf{
+    display:flex;
+    align-items:flex-end;
+    gap:9px;
+    height:340px;
+    padding:0 6px 14px 6px;
+    border-bottom:6px solid var(--ink);
+    position:relative;
+  }
+  .spine{
+    flex:0 0 auto;
+    width:34px;
+    border:1px solid rgba(33,28,22,.35);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    writing-mode:vertical-rl;
+    text-orientation:mixed;
+    font-family:'Fraunces', serif;
+    font-size:.72rem;
+    letter-spacing:.03em;
+    color:var(--paper);
+    padding:10px 0;
+  }
+  .spine.tone-1{background:var(--brown); height:88%;}
+  .spine.tone-2{background:var(--brown); height:100%;}
+  .spine.tone-3{background:var(--paper-alt); color:var(--ink); height:74%;}
+  .spine.tone-4{background:var(--ink); height:94%;}
+  .spine.tone-5{background:var(--ink); color:var(--paper); height:66%;}
+  .spine.wide{width:46px;}
+
+  /* ---------- Section basics ---------- */
+  section{padding:5rem 0;}
+  .section-alt{background:var(--paper-alt);}
+  .divider{
+    height:1px;
+    background:repeating-linear-gradient(90deg, var(--ink) 0 6px, transparent 6px 12px);
+    opacity:.5;
+    margin:0 0 3rem 0;
+  }
+  .section-heading{
+    font-size:clamp(1.9rem, 3.2vw, 2.6rem);
+    max-width:20ch;
+  }
+
+  /* ---------- Stat cards (Tentang) ---------- */
+  .stat-card{
+    border-top:2px solid var(--ink);
+    padding-top:.9rem;
+  }
+  .stat-num{
+    font-family:'Fraunces', serif;
+    font-size:2.6rem;
+    font-weight:600;
+    line-height:1;
+  }
+  .stat-label{
+    font-family:'Space Mono', monospace;
+    font-size:.72rem;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--brown);
+  }
+
+  /* ---------- Kategori shelf cards ---------- */
+  .genre-card{
+    background:var(--ink);
+    color:var(--paper);
+    padding:2rem 1.4rem;
+    min-height:190px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    position:relative;
+    overflow:hidden;
+    transition:transform .3s ease;
+  }
+  .genre-card:hover{transform:translateY(-6px);}
+  .genre-card h3{color:var(--paper); font-size:1.4rem; margin:0;}
+  .genre-card .count{
+    font-family:'Space Mono', monospace;
+    font-size:.72rem;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--paper-alt);
+  }
+
+  /* ---------- Katalog filter pills ---------- */
+  .filter-pill{
+    font-family:'Space Mono', monospace;
+    font-size:.75rem;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    border:1.5px solid var(--ink);
+    background:transparent;
+    color:var(--ink);
+    padding:.5rem 1.1rem;
+    border-radius:0;
+    margin:0 .4rem .6rem 0;
+    transition:all .2s ease;
+  }
+  .filter-pill.active, .filter-pill:hover{
+    background:var(--ink);
+    color:var(--paper);
+  }
+
+  /* ---------- Book card (index card motif) ---------- */
+  .book-card{
+    background:var(--paper);
+    border:1.5px solid var(--ink);
+    position:relative;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    transition:box-shadow .25s ease, transform .25s ease;
+  }
+  .book-card:hover{box-shadow:var(--shadow); transform:translateY(-4px);}
+  .book-card::before{
+    content:"";
+    position:absolute;
+    top:-7px; left:22px;
+    width:13px; height:13px;
+    background:var(--paper);
+    border:1.5px solid var(--ink);
+    border-radius:50%;
+  }
+  .book-cover{
+    aspect-ratio:3/4;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    padding:1.1rem 1rem;
+    border-bottom:1.5px solid var(--ink);
+  }
+  .book-cover .genre-tag{
+    align-self:flex-start;
+  }
+  .book-cover .cover-title{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:1.15rem;
+    line-height:1.15;
+  }
+  .book-cover .cover-author{
+    font-family:'Space Mono', monospace;
+    font-size:.68rem;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+  }
+  .book-body{
+    padding:.9rem 1rem 1.1rem 1rem;
+    display:flex;
+    flex-direction:column;
+    gap:.5rem;
+    flex:1;
+  }
+  .book-meta-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-family:'Space Mono', monospace;
+    font-size:.78rem;
+    border-bottom:1px dotted var(--cream-line);
+    padding-bottom:.5rem;
+  }
+  .book-price{font-weight:700;}
+  .btn-add{
+    margin-top:auto;
+    border:1.5px solid var(--ink);
+    background:transparent;
+    color:var(--ink);
+    font-family:'Space Mono', monospace;
+    font-size:.72rem;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    padding:.55rem .8rem;
+    border-radius:0;
+    transition:all .2s ease;
+  }
+  .btn-add:hover{background:var(--ink); color:var(--paper);}
+  .btn-add.added{background:var(--brown); border-color:var(--brown); color:var(--paper);}
+
+  /* cover tone variants */
+  .cv-1{background:linear-gradient(160deg, var(--brown), #2c1f14); color:var(--paper);}
+  .cv-2{background:linear-gradient(160deg, var(--brown), #5c4126); color:var(--paper);}
+  .cv-3{background:linear-gradient(160deg, var(--paper-alt), #ded0b6); color:var(--ink);}
+  .cv-4{background:linear-gradient(160deg, var(--ink), #34291d); color:var(--paper);}
+  .cv-5{background:linear-gradient(160deg, var(--ink), #34291d); color:var(--paper);}
+
+  /* ---------- Testimoni ---------- */
+  .quote-card{
+    border-left:2px solid var(--ink);
+    padding-left:1.2rem;
+  }
+  .quote-card p{font-size:1.05rem; font-style:italic;}
+  .quote-card footer{
+    font-family:'Space Mono', monospace;
+    font-size:.72rem;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--brown);
+  }
+
+  /* ---------- Kunjungi ---------- */
+  .visit-panel{
+    background:var(--ink);
+    color:var(--paper);
+    padding:3rem;
+  }
+  .visit-panel a{color:var(--paper-alt);}
+  .visit-map{
+    border:1.5px solid var(--paper-alt);
+    background:
+      repeating-linear-gradient(0deg, transparent 0 39px, rgba(247,241,230,.14) 39px 40px),
+      repeating-linear-gradient(90deg, transparent 0 39px, rgba(247,241,230,.14) 39px 40px);
+    min-height:280px;
+    position:relative;
+  }
+  .visit-map .pin{
+    position:absolute;
+    top:52%; left:46%;
+    width:16px; height:16px;
+    border:2px solid var(--paper);
+    border-radius:50% 50% 50% 0;
+    transform:rotate(-45deg);
+    background:var(--paper);
+  }
+
+  /* ---------- Footer ---------- */
+  footer.site-footer{
+    background:var(--brown);
+    color:var(--paper-alt);
+    padding:3rem 0 1.6rem;
+  }
+  footer.site-footer a{color:var(--paper-alt); text-decoration:none; opacity:.85;}
+  footer.site-footer a:hover{opacity:1; text-decoration:underline;}
+  .footer-brand{font-family:'Fraunces', serif; font-size:1.5rem; color:var(--paper);}
+  .footer-line{border-color:rgba(247,241,230,.2);}
+  .footer-fine{font-family:'Space Mono', monospace; font-size:.7rem; letter-spacing:.06em; opacity:.65;}
+
+  /* ---------- Reveal on scroll ---------- */
+  .reveal{opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease;}
+  .reveal.in{opacity:1; transform:translateY(0);}
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1; transform:none; transition:none;}
+    html{scroll-behavior:auto;}
+  }
+
+  @media (max-width: 767px){
+    .hero{padding-top:6rem;}
+    .bookshelf{height:230px;}
+    .visit-panel{padding:2rem 1.4rem;}
+  }
