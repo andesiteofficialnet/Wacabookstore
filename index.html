@@ -23,69 +23,112 @@
   </head>
   <body class="font-body-md">
     <!-- TopNavBar -->
-    <header
-      class="bg-surface sticky top-0 z-50 shadow-sm w-full h-20 transition-all duration-300"
-    >
+    <header class="sticky top-0 z-50 bg-surface shadow-sm">
       <div
-        class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-full"
+        class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop"
       >
-        <div class="text-headline-md font-headline-md font-black text-primary">
-          Wacabookstore
-        </div>
-        <nav class="hidden md:flex items-center gap-8">
-          <a
-            class="text-primary font-bold relative after:content-[''] after:absolute after:-bottom-1 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-primary after:rounded-full font-label-bold text-label-bold"
-            href="#"
-            >Home</a
-          >
-          <a
-            class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-bold text-label-bold"
-            href="#"
-            >Products</a
-          >
-          <a
-            class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-bold text-label-bold"
-            href="#"
-            >About</a
-          >
-          <a
-            class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-bold text-label-bold"
-            href="#"
-            >Contact</a
-          >
-        </nav>
-        <div class="flex items-center gap-4">
-          <div
-            class="hidden lg:flex items-center bg-white border border-[#D4A373] rounded-lg px-3 py-1.5"
-          >
-            <span
-              class="material-symbols-outlined text-on-surface-variant text-lg mr-2"
-              >search</span
-            >
-            <input
-              class="bg-transparent border-none focus:ring-0 text-body-sm w-40"
-              placeholder="Cari judul buku..."
-              type="text"
-            />
+        <div class="flex items-center justify-between h-20">
+          <!-- Logo -->
+          <h1 class="text-headline-md font-black text-primary">
+            Wacabookstore
+          </h1>
+
+          <!-- Desktop -->
+          <div class="hidden md:flex items-center gap-8">
+            <nav class="flex gap-8">
+              <a href="index.html" class="text-primary font-bold"> Home </a>
+
+              <a href="../products/index.html" class="hover:text-primary">
+                Products
+              </a>
+
+              <a href="../about_us/index.html" class="hover:text-primary">
+                About
+              </a>
+
+              <a href="#contact" class="hover:text-primary"> Contact </a>
+            </nav>
+
+            <!-- Search -->
+            <div class="flex items-center border rounded-lg px-3 py-2">
+              <span class="material-symbols-outlined mr-2"> search </span>
+
+              <input
+                type="text"
+                placeholder="Cari buku..."
+                class="outline-none bg-transparent w-40"
+              />
+            </div>
+
+            <button>
+              <span class="material-symbols-outlined text-2xl">
+                shopping_cart
+              </span>
+            </button>
+
+            <img src="avatar.jpg" class="w-10 h-10 rounded-full object-cover" />
           </div>
-          <button class="active:scale-95 transition-transform duration-200">
-            <span class="material-symbols-outlined text-primary text-2xl"
-              >shopping_cart</span
-            >
+
+          <!-- Hamburger -->
+          <button id="menuBtn" class="md:hidden">
+            <span id="menuIcon" class="material-symbols-outlined text-3xl">
+              menu
+            </span>
           </button>
-          <div
-            class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center overflow-hidden border-2 border-white shadow-sm"
-          >
-            <img
-              class="w-full h-full object-cover"
-              data-alt="A professional studio portrait of a friendly young woman with warm lighting and a soft focus library background. She is smiling gently at the camera, wearing a minimalist cream-colored knit sweater. The overall aesthetic is clean, intellectual, and inviting, matching a high-end bookstore's brand personality."
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFtfAVj7aDmqqar8xxL76GeHFOILAxCY_vlX3NLkNb8v6cvrxOBaKxGFILXhC1HZLlOWhZpItSnfWsz8Zd1VdZ4OKPF0ORw6AudKevGeEV1t8eUQCKNSrLz38Xoq-EyD3Rg5I2t2Hq7O8FAKk43gmVDskOlYtGl1ysVkmrgChfZNGb9rOlG9Dn0w__Qmw_052fJRFLjvl3Dv63ShoaRuTgxiZYWuMEOUi-PYjLxjoPGxIKuHf9OahAhg"
-            />
-          </div>
         </div>
-      </div>
-    </header>
-    <main>
+
+        <!-- Mobile Menu -->
+        <div
+    id="mobileMenu"
+    class="hidden md:hidden absolute top-20 left-0 w-full bg-white shadow-xl border-t border-gray-100 z-50">
+
+    <div class="px-6 py-6">
+
+        <nav class="flex flex-col gap-5">
+
+            <a href="index.html" class="font-semibold hover:text-[#38220F]">
+                Home
+            </a>
+
+            <a href="../products/index.html" class="hover:text-[#38220F]">
+                Products
+            </a>
+
+            <a href="../about_us/index.html" class="hover:text-[#38220F]">
+                About
+            </a>
+
+            <a href="#contact" class="hover:text-[#38220F]">
+                Contact
+            </a>
+
+        </nav>
+
+        <div class="flex items-center mt-6 border rounded-xl px-3 py-2">
+            <span class="material-symbols-outlined mr-2">search</span>
+
+            <input
+                type="text"
+                placeholder="Cari buku..."
+                class="w-full outline-none bg-transparent">
+        </div>
+
+        <div class="flex items-center justify-between mt-6">
+
+            <button class="flex items-center gap-2">
+                <span class="material-symbols-outlined">shopping_cart</span>
+                Keranjang
+            </button>
+
+            <img
+                src="avatar.jpg"
+                class="w-10 h-10 rounded-full object-cover">
+
+        </div>
+
+    </div>
+
+</div>
       <!-- Hero Section -->
       <section class="hero-gradient pt-12 pb-20 md:py-24">
         <div

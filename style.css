@@ -1,14 +1,75 @@
 body {
-            background-color: #ECE0D1; /* Cream background from style guidance */
-            color: #38220F; /* Dark brown accent */
-            overflow-x: hidden;
-        }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .soft-shadow {
-            box-shadow: 0 10px 30px -5px rgba(56, 34, 15, 0.08);
-        }
-        .hero-gradient {
-            background: linear-gradient(135deg, rgba(236, 224, 209, 0) 0%, rgba(212, 163, 115, 0.1) 100%);
-        }
+  background-color: #ece0d1; /* Cream background from style guidance */
+  color: #38220f; /* Dark brown accent */
+  overflow-x: hidden;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+}
+.soft-shadow {
+  box-shadow: 0 10px 30px -5px rgba(56, 34, 15, 0.08);
+}
+.hero-gradient {
+  background: linear-gradient(
+    135deg,
+    rgba(236, 224, 209, 0) 0%,
+    rgba(212, 163, 115, 0.1) 100%
+  );
+}
+.navbar {
+  height: 80px;
+}
+
+.navbar-nav .nav-link {
+  color: #5b4b3a;
+  font-weight: 600;
+  transition: 0.3s;
+  position: relative;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #38220f;
+}
+
+.navbar-nav .nav-link.active {
+  color: #38220f;
+  font-weight: 700;
+}
+
+.navbar-nav .nav-link.active::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: #38220f;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: #fff;
+    margin-top: 15px;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  }
+
+  .navbar-nav {
+    gap: 10px;
+  }
+
+  .d-lg-flex {
+    margin-top: 15px;
+  }
+}
