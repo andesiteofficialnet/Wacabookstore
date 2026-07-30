@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Wacabookstore | Temukan Buku Bekas Berkualitas</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="tailwind-config.js"></script>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body class="font-body-md">
+<!-- TopNavBar -->
+<header class="bg-surface sticky top-0 z-50 shadow-sm w-full h-20 transition-all duration-300">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-full">
+<div class="text-headline-md font-headline-md font-black text-primary">Wacabookstore</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-primary font-bold relative after:content-[''] after:absolute after:-bottom-1 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-primary after:rounded-full font-label-bold text-label-bold" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-bold text-label-bold" href="#">Products</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-bold text-label-bold" href="#">About</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-bold text-label-bold" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<div class="hidden lg:flex items-center bg-white border border-[#D4A373] rounded-lg px-3 py-1.5">
+<span class="material-symbols-outlined text-on-surface-variant text-lg mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-sm w-40" placeholder="Cari judul buku..." type="text"/>
+</div>
+<button class="active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined text-primary text-2xl">shopping_cart</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center overflow-hidden border-2 border-white shadow-sm">
+<img class="w-full h-full object-cover" data-alt="A professional studio portrait of a friendly young woman with warm lighting and a soft focus library background. She is smiling gently at the camera, wearing a minimalist cream-colored knit sweater. The overall aesthetic is clean, intellectual, and inviting, matching a high-end bookstore's brand personality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFtfAVj7aDmqqar8xxL76GeHFOILAxCY_vlX3NLkNb8v6cvrxOBaKxGFILXhC1HZLlOWhZpItSnfWsz8Zd1VdZ4OKPF0ORw6AudKevGeEV1t8eUQCKNSrLz38Xoq-EyD3Rg5I2t2Hq7O8FAKk43gmVDskOlYtGl1ysVkmrgChfZNGb9rOlG9Dn0w__Qmw_052fJRFLjvl3Dv63ShoaRuTgxiZYWuMEOUi-PYjLxjoPGxIKuHf9OahAhg"/>
+</div>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="hero-gradient pt-12 pb-20 md:py-24">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="order-2 lg:order-1">
+<h1 class="text-headline-xl-mobile md:text-headline-xl font-headline-xl text-primary mb-6">
+                        Temukan Buku Bekas Berkualitas dengan Harga Terjangkau
+                    </h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant mb-10 max-w-xl">
+                        Wacabookstore menyediakan berbagai koleksi buku bekas yang masih layak baca dengan harga ramah di kantong.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-[#38220F] text-white font-label-bold text-label-bold px-8 py-4 rounded-xl uppercase hover:opacity-90 transition-all soft-shadow active:scale-95">
+                            Lihat Produk
+                        </button>
+<button class="border-2 border-[#38220F] text-[#38220F] font-label-bold text-label-bold px-8 py-4 rounded-xl uppercase hover:bg-[#38220F] hover:text-white transition-all active:scale-95">
+                            Cara Belanja
+                        </button>
+</div>
+</div>
+<div class="order-1 lg:order-2 flex justify-center">
+<div class="relative w-full max-w-md aspect-square bg-white rounded-[48px] overflow-hidden soft-shadow rotate-3 transform hover:rotate-0 transition-transform duration-500">
+<img class="w-full h-full object-cover" data-alt="An artistic, high-resolution composition of a tall, aesthetic stack of vintage and modern hardcover books. The books are arranged neatly in a minimalist light-filled studio. The color palette consists of soft creams, deep browns, and muted terracotta. Soft morning sunlight streams through a window, creating long, gentle shadows and highlighting the tactile texture of the paper and linen covers." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM-9OLuEUYZBObsy3bQbo60-BcYAl9eUFVmhp7MYMF0HoPsApCcLUP7yl-7zerm1yxC0xu5_MaYwd1xoUuF17SrkHILoFs7deAv9zaoVFdy4JoBaTtNnoaU4w1SOO66t240laH9f8LuODyq8xhTNY0R3JSluiNa6eQibt0CbgxpcGOMCYSR1HPHbTpUuBcaKmr7kTp0EKfUNEV9r-Q5zYI7e7ta_w6hPZfpUJ3Sj4LoeXAheA_zrH-vg"/>
+<div class="absolute inset-0 bg-primary/5"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Books Grid -->
+<section class="py-20 bg-[#f9f9f9]">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex justify-between items-end mb-12">
+<div>
+<span class="text-label-bold font-label-bold text-[#D4A373] uppercase tracking-widest block mb-2">Koleksi Terpilih</span>
+<h2 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg text-primary">Rekomendasi Minggu Ini</h2>
+</div>
+<a class="hidden md:flex items-center gap-2 text-primary font-bold hover:underline" href="#">
+                        Lihat Semua <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-gutter">
+<!-- Book Card 1 -->
+<div class="group bg-white rounded-[24px] p-4 soft-shadow hover:-translate-y-2 transition-all duration-300">
+<div class="aspect-[3/4] rounded-xl overflow-hidden mb-4 bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Close-up of a classic literature book cover on a wooden desk. The book has elegant gold-embossed typography on a dark navy blue spine. Beside it lies a pair of reading glasses and a dried leaf. The lighting is moody and intellectual, emphasizing a calm discovery atmosphere. Colors are deep blues, rich browns, and warm cream highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCP0mWFbOfbcGnXE6BbpmzETnvIv5YLyO2C89pVJmei4VOgcLOQCaAkQdwCuJbgSiXY7FK8iekHh_ZqrUoP8R3vroKpPyzcM_4fts2PK3NectVALeC5U3KLSs7M6f4lgkIFhsupl8vCuiu-elLaOJc_4ZpSiEgBq32KGYSl83PrY178xtzuPIHD34-YOThUfDGxo6vjsJd3zfL5DDZZetDKcTBicB4eVQFOSTBKFxegp1NBjDvHaK4Fug"/>
+</div>
+<div class="space-y-1">
+<div class="bg-secondary-container px-2 py-0.5 rounded-full inline-block mb-2">
+<span class="text-[10px] font-label-bold text-on-secondary-container uppercase">Sastra</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-primary line-clamp-1">Senja di Jakarta</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Mochtar Lubis</p>
+<p class="text-primary font-bold pt-2">Rp 45.000</p>
+</div>
+</div>
+<!-- Book Card 2 -->
+<div class="group bg-white rounded-[24px] p-4 soft-shadow hover:-translate-y-2 transition-all duration-300">
+<div class="aspect-[3/4] rounded-xl overflow-hidden mb-4 bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A modern minimalist book cover with abstract geometric shapes in earth tones. The title is written in a clean serif font. The book is placed on a pristine white surface with a slight ambient shadow. High-key lighting makes the image feel airy and contemporary, aligning with the modern used bookstore aesthetic. Palette is cream, tan, and dark brown." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7QM7THxKDeVbeaq7XL8yDGrIMvWi4a43uxBSqNgdv1qOCR677qN4_z4SbCezk6tBNLKe4XtJKs65ATi1Na5kY8auS6nF0W5QzXc4CTgJF6Ir6F-wLgpGq2fnyevPViHXco6PNu-KFNdnYa1lLAouEKBiHM_lvfu1ttnLkpOzT9goBA5QlioZUbW79PzVkV2no3eY58xLhsv8dCozE_xIX_irMOYJE4f5z0yMErz_JWeoFVJshJFFhNg"/>
+</div>
+<div class="space-y-1">
+<div class="bg-secondary-container px-2 py-0.5 rounded-full inline-block mb-2">
+<span class="text-[10px] font-label-bold text-on-secondary-container uppercase">Filosofi</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-primary line-clamp-1">Filosofi Teras</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Henry Manampiring</p>
+<p class="text-primary font-bold pt-2">Rp 55.000</p>
+</div>
+</div>
+<!-- Book Card 3 -->
+<div class="group bg-white rounded-[24px] p-4 soft-shadow hover:-translate-y-2 transition-all duration-300">
+<div class="aspect-[3/4] rounded-xl overflow-hidden mb-4 bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A vintage style book cover with intricate botanical illustrations. The book is surrounded by soft natural elements like a sprig of lavender. The setting is a cozy corner of a rustic library with warm wood textures. The visual style is tactile and nostalgic, invoking the scent of paper and old ink. Lighting is soft and directional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCozUXG3y1fOc8bkDyE9j9_lR9Jrpc11rULP2MWFjqXx33pKsEr4WRAHu_YVlikB5z5yFb2nU9LCBl44b5deYLFO7s3aoW-Stjj2Ih34fjrU6Sz-0dKaC8Tfa_HH624jKglwmrOvRaegriTJLW0D7_XgvXt6RJlVfBjAzH92Ib4Wy_9GW35U7bbF-UXixAbsoq-hlOC3i-Gtr2UNUz-XWxZX2R2fsTiPLwGQ33NGmaprr8bKHay131c7w"/>
+</div>
+<div class="space-y-1">
+<div class="bg-secondary-container px-2 py-0.5 rounded-full inline-block mb-2">
+<span class="text-[10px] font-label-bold text-on-secondary-container uppercase">Sejarah</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-primary line-clamp-1">Bumi Manusia</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Pramoedya Ananta Toer</p>
+<p class="text-primary font-bold pt-2">Rp 65.000</p>
+</div>
+</div>
+<!-- Book Card 4 -->
+<div class="group bg-white rounded-[24px] p-4 soft-shadow hover:-translate-y-2 transition-all duration-300">
+<div class="aspect-[3/4] rounded-xl overflow-hidden mb-4 bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A collection of diverse books stacked on a minimalist white shelf. The focus is on a single book with a bright, clean cover design. The lighting is bright and modern, creating a light-mode aesthetic. The composition uses generous white space and soft shadows to give a sense of calm discovery and professional curation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKg38fvVAELd_aefkAyz1qhKFtEhGf_0kDztvvxrmctbtmRAqvcJy0CJBiVQZ0svmgAq1BG3XwA5LrrRUttHB2dtZfFOQuyNYKQKUTbqynLJO7AKC8HPGChq_5ay5Lmv3rtXCrgnHtTRJtZE5R035FEl7voubE_n_3aV8Cgdaa0rAzxbXcPjgN7ep3cQMi0uPRUK0Kk0zhFT4ndM4Vxi8eicMnyYTpYdLmqkm7Rj17q1yR0PWR-uDU_g"/>
+</div>
+<div class="space-y-1">
+<div class="bg-secondary-container px-2 py-0.5 rounded-full inline-block mb-2">
+<span class="text-[10px] font-label-bold text-on-secondary-container uppercase">Pengembangan Diri</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-primary line-clamp-1">Atomic Habits</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">James Clear</p>
+<p class="text-primary font-bold pt-2">Rp 70.000</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Kenapa Memilih Kami Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop bg-[#ECE0D1]">
+<div class="max-w-container-max mx-auto text-center mb-16">
+<h2 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg text-primary mb-4">Kenapa Memilih Kami</h2>
+<div class="w-20 h-1 bg-primary mx-auto rounded-full"></div>
+</div>
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Feature 1 -->
+<div class="bg-white p-8 rounded-[32px] soft-shadow flex flex-col items-center text-center group hover:bg-[#38220F] transition-colors duration-500">
+<div class="w-16 h-16 bg-[#ECE0D1] rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary-container transition-colors duration-500">
+<span class="material-symbols-outlined text-primary text-3xl group-hover:text-on-primary-container">menu_book</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-primary mb-3 group-hover:text-white">Buku Berkualitas</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant group-hover:text-on-primary-fixed-variant">Setiap buku melalui proses kurasi ketat untuk memastikan kelayakan baca.</p>
+</div>
+<!-- Feature 2 -->
+<div class="bg-white p-8 rounded-[32px] soft-shadow flex flex-col items-center text-center group hover:bg-[#38220F] transition-colors duration-500">
+<div class="w-16 h-16 bg-[#ECE0D1] rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary-container transition-colors duration-500">
+<span class="material-symbols-outlined text-primary text-3xl group-hover:text-on-primary-container">sell</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-primary mb-3 group-hover:text-white">Harga Terjangkau</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant group-hover:text-on-primary-fixed-variant">Nikmati koleksi buku favorit dengan harga yang sangat bersahabat.</p>
+</div>
+<!-- Feature 3 -->
+<div class="bg-white p-8 rounded-[32px] soft-shadow flex flex-col items-center text-center group hover:bg-[#38220F] transition-colors duration-500">
+<div class="w-16 h-16 bg-[#ECE0D1] rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary-container transition-colors duration-500">
+<span class="material-symbols-outlined text-primary text-3xl group-hover:text-on-primary-container">local_shipping</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-primary mb-3 group-hover:text-white">Pengiriman Cepat</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant group-hover:text-on-primary-fixed-variant">Sistem logistik terintegrasi menjamin buku sampai tepat waktu.</p>
+</div>
+<!-- Feature 4 -->
+<div class="bg-white p-8 rounded-[32px] soft-shadow flex flex-col items-center text-center group hover:bg-[#38220F] transition-colors duration-500">
+<div class="w-16 h-16 bg-[#ECE0D1] rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary-container transition-colors duration-500">
+<span class="material-symbols-outlined text-primary text-3xl group-hover:text-on-primary-container">sentiment_satisfied</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-primary mb-3 group-hover:text-white">Pelayanan Ramah</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant group-hover:text-on-primary-fixed-variant">Tim admin kami siap membantu Anda menemukan buku yang dicari.</p>
+</div>
+</div>
+</section>
+<!-- Newsletter / CTA -->
+<section class="py-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="bg-[#38220F] rounded-[48px] p-12 md:p-20 text-white relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-12">
+<div class="relative z-10 max-w-xl text-center lg:text-left">
+<h2 class="text-headline-lg font-headline-lg mb-6">Dapatkan Update Koleksi Terbaru</h2>
+<p class="text-body-lg opacity-80 mb-0">Jadilah yang pertama tahu saat koleksi buku langka kami tiba kembali di rak digital.</p>
+</div>
+<div class="relative z-10 w-full max-w-md">
+<form class="flex flex-col sm:flex-row gap-4">
+<input class="flex-1 bg-white/10 border border-white/20 rounded-xl px-6 py-4 focus:bg-white/20 focus:outline-none placeholder:text-white/50 text-white" placeholder="Email Anda" type="email"/>
+<button class="bg-[#D4A373] text-[#38220F] font-bold px-8 py-4 rounded-xl hover:bg-white transition-colors">Daftar</button>
+</form>
+</div>
+<!-- Decorative Circle -->
+<div class="absolute -right-20 -bottom-20 w-80 h-80 bg-[#D4A373]/10 rounded-full blur-3xl"></div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container w-full py-12 md:py-20 px-margin-mobile md:px-margin-desktop border-t border-outline-variant">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="col-span-1 md:col-span-1">
+<div class="text-headline-md font-headline-md font-black text-primary mb-6">Wacabookstore</div>
+<p class="text-body-sm text-on-surface-variant leading-relaxed">
+                    © 2024 Wacabookstore. Modern bibliophilia for the digital age. Menyediakan jendela ke dunia melalui halaman-halaman terpilih.
+                </p>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-primary uppercase mb-6">Navigasi</h4>
+<ul class="space-y-4">
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Katalog Buku</a></li>
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Penulis Populer</a></li>
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Promo Spesial</a></li>
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Blog Buku</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-primary uppercase mb-6">Bantuan</h4>
+<ul class="space-y-4">
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Shipping Info</a></li>
+<li><a class="text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Returns</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-primary uppercase mb-6">Ikuti Kami</h4>
+<div class="flex gap-4 mb-6">
+<a class="w-10 h-10 rounded-full bg-white flex items-center justify-center soft-shadow hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-lg">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white flex items-center justify-center soft-shadow hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-lg">public</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white flex items-center justify-center soft-shadow hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-lg">chat_bubble</span>
+</a>
+</div>
+<div class="flex items-center gap-2 text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary">mail</span>
+                    halo@wacabookstore.com
+                </div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto mt-16 pt-8 border-t border-outline-variant text-center">
+<p class="text-label-bold font-label-bold text-on-surface-variant opacity-60">Handcrafted with care for fellow book lovers.</p>
+</div>
+</footer>
+<script src="script.js"></script>
+</body></html>
