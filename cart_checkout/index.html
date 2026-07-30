@@ -1,0 +1,206 @@
+<!DOCTYPE html><html class="light" lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Wacabookstore - Shopping Cart &amp; Checkout</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind Configuration -->
+<script src="tailwind-config.js"></script>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body class="antialiased custom-scrollbar">
+<!-- Top Navigation Bar -->
+<header class="bg-surface sticky top-0 z-50 w-full h-20 shadow-sm">
+<nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-full">
+<div class="text-headline-md font-headline-md font-black text-primary">Wacabookstore</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-md" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-md" href="#">Products</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-md" href="#">About</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-md" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-primary active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shopping_cart</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-secondary-container overflow-hidden border-2 border-surface">
+<img class="w-full h-full object-cover" data-alt="A professional studio portrait of a young adult reader with short hair, smiling warmly. The lighting is soft and natural, coming from a side window. The overall aesthetic is minimalist and high-end, featuring neutral earthy tones that match the bookstore brand's cream and brown palette. The image has a clean, sharp focus and a peaceful atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvqtLT3P2ZGFBdUSBfEorUd6dhatK_Dp7OvEmBbjGqKeXanl-6DQEyhoJmANkVdYVeoNzRtSPm_S1UfFDrc1QgBMSeeAYni6_-m2PWK_4h_xFCCqQ3fDbcECRdsQfj266nsM7xeMbmbA4qW5qjpK53aYjLr3MbbXq6C-U5RxnGfTc8o8Z-0kmLH10UhB6YX8QrqWUdcirGvCOWeT3__vhrz0Tc2Q4MpKDU_vwURY7vllKS3JZR6WATeQ">
+</div>
+</div>
+</nav>
+</header>
+<!-- Main Content Canvas -->
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12">
+<!-- Page Title -->
+<div class="mb-12">
+<h1 class="text-headline-xl-mobile md:text-headline-xl font-headline-xl text-primary mb-2">Keranjang Belanja</h1>
+<p class="text-body-lg text-on-surface-variant">Review your selection and finalize your literary journey.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Left Side: Cart Items (Bento-style list) -->
+<div class="lg:col-span-7 space-y-6">
+<!-- Cart Item 1 -->
+<div class="bg-surface rounded-[24px] p-6 book-card-shadow flex flex-col sm:flex-row gap-6 items-center transition-all hover:translate-y-[-2px]">
+<div class="w-24 h-36 flex-shrink-0 bg-surface-container rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A vintage hardcover book cover of 'The Great Gatsby' resting on a rustic wooden desk. Warm, late afternoon sunlight creates soft shadows. The book has weathered edges and golden typography, conveying a sense of history and quality. The color palette is composed of deep browns, soft creams, and a touch of aged paper yellow, aligning with the warm bookstore brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0AWw1nI-8jVXe8OHH8JoLdgkOlZd0RKSOK6V1ao1ciPbi1Qz9BK1Ht0TRFwGMu1I8a4IctjHpX4zQPZLx0Bp7a5wqkA8guwuwdytOhGae_9DvqPocEZ6CHUmDuG6rVQ3dSl-8yWZyPZz1zo6PMcKINzXxh-p2xO0hynvmkgNLd5KxaFExHngRgz84VptTIrJR7iymOY8X0oW3ojDF2VR-eG7ZoU2Fb3_U6WnP_K9txfFJu_4Ibf7_YA">
+</div>
+<div class="flex-grow text-center sm:text-left">
+<h3 class="text-headline-md font-headline-md text-primary">The Great Gatsby</h3>
+<p class="text-body-sm text-on-surface-variant mb-4">F. Scott Fitzgerald • Hardcover</p>
+<div class="flex items-center justify-center sm:justify-start gap-4">
+<button class="w-8 h-8 rounded-full border border-outline flex items-center justify-center hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<span class="font-bold text-body-md">1</span>
+<button class="w-8 h-8 rounded-full border border-outline flex items-center justify-center hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+<div class="text-right flex flex-row sm:flex-col justify-between items-center sm:items-end w-full sm:w-auto">
+<span class="text-headline-md font-headline-md text-primary">Rp 125.000</span>
+<button class="text-error hover:underline text-label-bold mt-2 flex items-center gap-1 uppercase">
+<span class="material-symbols-outlined text-[16px]">delete</span>
+                            Remove
+                        </button>
+</div>
+</div>
+<!-- Cart Item 2 -->
+<div class="bg-surface rounded-[24px] p-6 book-card-shadow flex flex-col sm:flex-row gap-6 items-center transition-all hover:translate-y-[-2px]">
+<div class="w-24 h-36 flex-shrink-0 bg-surface-container rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A modern minimalist book cover for 'Norwegian Wood' by Haruki Murakami. The design is clean with soft pastel colors and bold serif typography. The book is placed on a pristine white marble surface with a small sprig of dried lavender nearby. The lighting is high-key and airy, evoking a calm, intellectual atmosphere. The overall style is refined and contemporary." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiqu9Ivkvds_WtSHnDNMl61QRMOjfQEdFBZO0od8mqUbv7ujLtTM-Xyp2vHN_l6z_ZYWR9SrapsUaIWiSoSG4wcxnFqX81g28VcRz6tmhk36MxFX_dQuRilNPDuTOP1JrhWeKd5Lv_C0qnV5eAnMCqdc7oxXPMWmUnXgULF904F9HG2NxZ6bQ77Ref7zJEM4_uwv_8ENrZkubvVKNX13XzvSSCnQX5E0YiPHYjqApS-hU7lJo7fvYmnA">
+</div>
+<div class="flex-grow text-center sm:text-left">
+<h3 class="text-headline-md font-headline-md text-primary">Norwegian Wood</h3>
+<p class="text-body-sm text-on-surface-variant mb-4">Haruki Murakami • Paperback</p>
+<div class="flex items-center justify-center sm:justify-start gap-4">
+<button class="w-8 h-8 rounded-full border border-outline flex items-center justify-center hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<span class="font-bold text-body-md">2</span>
+<button class="w-8 h-8 rounded-full border border-outline flex items-center justify-center hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+<div class="text-right flex flex-row sm:flex-col justify-between items-center sm:items-end w-full sm:w-auto">
+<span class="text-headline-md font-headline-md text-primary">Rp 190.000</span>
+<button class="text-error hover:underline text-label-bold mt-2 flex items-center gap-1 uppercase">
+<span class="material-symbols-outlined text-[16px]">delete</span>
+                            Remove
+                        </button>
+</div>
+</div>
+<!-- Empty Cart Incentive / Promo Area -->
+<div class="bg-primary-container rounded-[24px] p-8 text-on-primary-container flex flex-col md:flex-row items-center gap-6">
+<span class="material-symbols-outlined text-[48px] text-primary-fixed">local_library</span>
+<div class="flex-grow text-center md:text-left">
+<p class="font-headline-md text-headline-md leading-tight mb-1 text-on-primary-container">Tambah 1 buku lagi?</p>
+<p class="text-body-sm opacity-80">Dapatkan gratis pembatas buku eksklusif Wacabookstore.</p>
+</div>
+<button class="px-6 py-3 bg-primary-fixed text-on-primary-fixed rounded-full font-label-bold uppercase tracking-wider hover:opacity-90 transition-opacity whitespace-nowrap">
+                        Jelajahi Koleksi
+                    </button>
+</div>
+</div>
+<!-- Right Side: Checkout Form & Summary -->
+<div class="lg:col-span-5 space-y-6">
+<!-- Order Summary -->
+<div class="bg-surface rounded-[24px] p-8 book-card-shadow">
+<h2 class="text-headline-md font-headline-md text-primary mb-6">Informasi Pemesan</h2>
+<form class="space-y-4" id="checkoutForm">
+<div>
+<label class="block text-label-bold text-on-surface-variant uppercase mb-2">Nama Lengkap</label>
+<input class="w-full bg-white border border-[#ECE0D1] focus:border-primary focus:ring-0 rounded-lg p-3 text-body-md transition-all" placeholder="Contoh: Andi Wijaya" type="text">
+</div>
+<div>
+<label class="block text-label-bold text-on-surface-variant uppercase mb-2">Nomor WhatsApp</label>
+<div class="relative">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-body-md">+62</span>
+<input class="w-full bg-white border border-[#ECE0D1] focus:border-primary focus:ring-0 rounded-lg p-3 pl-12 text-body-md transition-all" placeholder="81234567890" type="tel">
+</div>
+</div>
+
+
+</form>
+<div class="mt-8 pt-6 border-t border-surface-container-highest">
+<div class="flex justify-between mb-2">
+<span class="text-body-md text-on-surface-variant">Subtotal</span>
+<span class="text-body-md font-bold">Rp 315.000</span>
+</div>
+<div class="flex justify-between mb-6">
+<span class="text-body-md text-on-surface-variant">Ambil di Toko</span>
+<span class="text-body-md font-bold text-primary">Gratis</span>
+</div>
+<div class="flex justify-between items-end mb-8">
+<span class="text-headline-md font-headline-md text-primary">Total</span>
+<div class="text-right">
+<span class="text-headline-lg font-headline-lg text-primary">Rp 315.000</span>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-tighter">Sudah termasuk PPN</p>
+</div>
+</div>
+<button class="w-full bg-primary text-white py-5 rounded-lg flex items-center justify-center gap-3 font-label-bold text-[16px] tracking-widest uppercase hover:opacity-90 active:scale-[0.98] transition-all shadow-xl shadow-primary/20" onclick="handleOrder()">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
+                            Pesan Sekarang
+                        </button>
+<p class="text-center text-body-sm text-on-surface-variant mt-4 italic">Anda akan diarahkan ke WhatsApp untuk konfirmasi pesanan dan jadwal pengambilan.</p>
+</div>
+</div>
+<!-- Trust Badges -->
+<div class="flex justify-between gap-4 px-4">
+<div class="flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary-container mb-2">verified_user</span>
+<span class="text-[10px] font-bold uppercase text-on-surface-variant">Transaksi Aman</span>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary-container mb-2">local_shipping</span>
+<span class="text-[10px] font-bold uppercase text-on-surface-variant">Kurir Terpercaya</span>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary-container mb-2">history_edu</span>
+<span class="text-[10px] font-bold uppercase text-on-surface-variant">Kurasi Ahli</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-surface-container py-12 px-margin-mobile md:px-margin-desktop mt-20">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="md:col-span-2">
+<div class="text-headline-md font-headline-md font-black text-primary mb-4">Wacabookstore</div>
+<p class="text-body-sm text-on-surface-variant max-w-sm mb-6">
+                    © 2024 Wacabookstore. Modern bibliophilia for the digital age. Bringing the warmth of a library to your doorstep.
+                </p>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-surface flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all cursor-pointer">
+<span class="material-symbols-outlined">public</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all cursor-pointer">
+<span class="material-symbols-outlined">alternate_email</span>
+</div>
+</div>
+</div>
+<div>
+<h4 class="text-label-bold text-primary uppercase mb-4">Layanan Pelanggan</h4>
+<ul class="space-y-2">
+<li class=""><a class="text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Shipping Info</a></li>
+<li class=""><a class="text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Returns</a></li>
+<li class=""><a class="text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-label-bold text-primary uppercase mb-4">Kebijakan</h4>
+<ul class="space-y-2">
+<li class=""><a class="text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li class=""><a class="text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+</footer>
+<script src="script.js"></script>
+
+
+</body></html>
