@@ -130,38 +130,26 @@
 
 </div>
       <!-- Hero Section -->
-      <section class="hero-gradient pt-12 pb-20 md:py-24">
+      <section
+class="relative overflow-hidden pt-12 md:pt-24 pb-12 md:pb-32 bg-[#0B0B0B]">
+<div class="absolute inset-0">
+
+    <div
+        class="absolute w-[500px] h-[500px] bg-[#C4A46B]/10 blur-[160px] -top-32 -left-32">
+    </div>
+
+    <div
+        class="absolute w-[500px] h-[500px] bg-white/5 blur-[180px] bottom-0 right-0">
+    </div>
+
+</div>
         <div
-          class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+          class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center"
         >
-          <div class="order-2 lg:order-1">
-            <h1
-              class="text-headline-xl-mobile md:text-headline-xl font-headline-xl text-primary mb-6"
-            >
-              Temukan Buku Bekas Berkualitas dengan Harga Terjangkau
-            </h1>
-            <p
-              class="text-body-lg font-body-lg text-on-surface-variant mb-10 max-w-xl"
-            >
-              Wacabookstore menyediakan berbagai koleksi buku bekas yang masih
-              layak baca dengan harga ramah di kantong.
-            </p>
-            <div class="flex flex-wrap gap-4">
-              <button
-                class="bg-[#38220F] text-white font-label-bold text-label-bold px-8 py-4 rounded-xl uppercase hover:opacity-90 transition-all soft-shadow active:scale-95"
-              >
-                Lihat Produk
-              </button>
-              <button
-                class="border-2 border-[#38220F] text-[#38220F] font-label-bold text-label-bold px-8 py-4 rounded-xl uppercase hover:bg-[#38220F] hover:text-white transition-all active:scale-95"
-              >
-                Cara Belanja
-              </button>
-            </div>
-          </div>
+          <!-- Gambar - Posisi paling atas di mobile -->
           <div class="order-1 lg:order-2 flex justify-center">
             <div
-              class="relative w-full max-w-md aspect-square bg-white rounded-[48px] overflow-hidden soft-shadow rotate-3 transform hover:rotate-0 transition-transform duration-500"
+              class="relative w-full max-w-[280px] md:max-w-md aspect-square bg-white rounded-[32px] md:rounded-[48px] overflow-hidden soft-shadow rotate-0 md:rotate-3 hover:rotate-0 transition-transform duration-500 mx-auto"
             >
               <img
                 class="w-full h-full object-cover"
@@ -171,10 +159,81 @@
               <div class="absolute inset-0 bg-primary/5"></div>
             </div>
           </div>
+
+          <!-- Konten Teks - Posisi kedua di mobile -->
+          <div class="order-2 lg:order-1 text-center md:text-left">
+
+    <span
+        class="inline-block px-4 py-2 rounded-full border border-[#C4A46B]/40 text-[#C4A46B] text-sm tracking-widest uppercase mb-4 md:mb-6">
+        Independent Bookstore
+    </span>
+    
+
+    <h1
+        class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl leading-tight font-serif font-bold text-white mb-4 md:mb-6">
+        Membaca Adalah
+        <span class="text-[#C4A46B]">
+            Bentuk Perlawanan.
+        </span>
+    </h1>
+
+    <p
+        class="text-base md:text-lg text-gray-400 leading-7 md:leading-8 max-w-xl mb-6 md:mb-10 mx-auto md:mx-0">
+        WACA menghadirkan buku-buku pilihan mengenai filsafat,
+        politik, sejarah, kritik sosial, serta pemikiran yang
+        menantang cara kita melihat dunia.
+    </p>
+
+    <div class="flex gap-4 flex-wrap justify-center md:justify-start">
+
+        <a href="products/index.html"
+            class="bg-[#C4A46B] text-black px-6 md:px-8 py-3 md:py-4 rounded-xl font-semibold hover:scale-105 transition text-sm md:text-base">
+
+            Jelajahi Buku
+
+        </a>
+
+        <a href="about_us/index.html"
+            class="border border-[#C4A46B] text-[#C4A46B] px-6 md:px-8 py-3 md:py-4 rounded-xl hover:bg-[#C4A46B] hover:text-black transition text-sm md:text-base">
+
+            Tentang Kami
+
+        </a>
+
+    </div>
+
+</div>
+          </div>
         </div>
       </section>
+      <section class="py-28 bg-[#111111]">
+
+<div class="max-w-4xl mx-auto text-center px-6">
+
+<p class="text-[#C4A46B] uppercase tracking-[6px] mb-6">
+
+Quote
+
+</p>
+
+<h2 class="text-4xl font-serif leading-relaxed text-white">
+
+"Semakin sedikit rakyat membaca,
+semakin mudah mereka dikendalikan."
+
+</h2>
+
+<p class="mt-8 text-gray-500">
+
+WACA Bookstore
+
+</p>
+
+</div>
+
+</section>
       <!-- Featured Books Grid -->
-      <section class="py-20 bg-[#f9f9f9]">
+      <section class="py-20 bg-[#0b0b0b]">
         <div
           class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop"
         >
@@ -337,7 +396,7 @@
         </div>
       </section>
       <!-- Kenapa Memilih Kami Section -->
-      <section class="py-24 px-margin-mobile md:px-margin-desktop bg-[#ECE0D1]">
+      <section class="py-24 px-margin-mobile md:px-margin-desktop bg-[#111111]">
         <div class="max-w-container-max mx-auto text-center mb-16">
           <h2
             class="text-headline-lg-mobile md:text-headline-lg font-headline-lg text-primary mb-4"

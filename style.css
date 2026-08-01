@@ -1,8 +1,9 @@
 body {
-  background-color: #ece0d1; /* Cream background from style guidance */
-  color: #38220f; /* Dark brown accent */
-  overflow-x: hidden;
+  background: #0b0b0b;
+
+  color: #933800;
 }
+
 .material-symbols-outlined {
   font-variation-settings:
     "FILL" 0,
@@ -17,7 +18,7 @@ body {
   background: linear-gradient(
     135deg,
     rgba(236, 224, 209, 0) 0%,
-    rgba(212, 163, 115, 0.1) 100%
+    rgba(196, 180, 180, 0.1) 100%
   );
 }
 .navbar {
