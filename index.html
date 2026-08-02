@@ -1,683 +1,530 @@
 <!doctype html>
-
-<html class="light" lang="id">
+<html lang="id">
   <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Wacabookstore | Temukan Buku Bekas Berkualitas</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wacabookstore · Buku Pemerintah & Sejarah</title>
+    <!-- Bootstrap 5 + Icons -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&amp;display=swap"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
+    <!-- Google Fonts (serif + sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;600;700&family=Source+Sans+3:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <script src="tailwind-config.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="font-body-md">
-    <!-- TopNavBar -->
-    <header class="sticky top-0 z-50 bg-surface shadow-sm">
-      <div
-        class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop"
-      >
-        <div class="flex items-center justify-between h-20">
-          <!-- Logo -->
-          <h1 class="text-headline-md font-black text-primary">
-            Wacabookstore
-          </h1>
-
-          <!-- Desktop -->
-          <div class="hidden md:flex items-center gap-8">
-            <nav class="flex gap-8">
-              <a href="index.html" class="text-primary font-bold"> Home </a>
-
-              <a href="../products/index.html" class="hover:text-primary">
-                Products
-              </a>
-
-              <a href="../about_us/index.html" class="hover:text-primary">
-                About
-              </a>
-
-              <a href="#contact" class="hover:text-primary"> Contact </a>
-            </nav>
-
-            <!-- Search -->
-            <div class="flex items-center border rounded-lg px-3 py-2">
-              <span class="material-symbols-outlined mr-2"> search </span>
-
-              <input
-                type="text"
-                placeholder="Cari buku..."
-                class="outline-none bg-transparent w-40"
-              />
-            </div>
-
-            <button>
-              <span class="material-symbols-outlined text-2xl">
-                shopping_cart
-              </span>
-            </button>
-
-            <img src="avatar.jpg" class="w-10 h-10 rounded-full object-cover" />
-          </div>
-
-          <!-- Hamburger -->
-          <button id="menuBtn" class="md:hidden">
-            <span id="menuIcon" class="material-symbols-outlined text-3xl">
-              menu
-            </span>
-          </button>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div
-    id="mobileMenu"
-    class="hidden md:hidden absolute top-20 left-0 w-full bg-white shadow-xl border-t border-gray-100 z-50">
-
-    <div class="px-6 py-6">
-
-        <nav class="flex flex-col gap-5">
-
-            <a href="index.html" class="font-semibold hover:text-[#38220F]">
-                Home
-            </a>
-
-            <a href="../products/index.html" class="hover:text-[#38220F]">
-                Products
-            </a>
-
-            <a href="../about_us/index.html" class="hover:text-[#38220F]">
-                About
-            </a>
-
-            <a href="#contact" class="hover:text-[#38220F]">
-                Contact
-            </a>
-
-        </nav>
-
-        <div class="flex items-center mt-6 border rounded-xl px-3 py-2">
-            <span class="material-symbols-outlined mr-2">search</span>
-
-            <input
-                type="text"
-                placeholder="Cari buku..."
-                class="w-full outline-none bg-transparent">
-        </div>
-
-        <div class="flex items-center justify-between mt-6">
-
-            <button class="flex items-center gap-2">
-                <span class="material-symbols-outlined">shopping_cart</span>
-                Keranjang
-            </button>
-
-            <img
-                src="avatar.jpg"
-                class="w-10 h-10 rounded-full object-cover">
-
-        </div>
-
-    </div>
-
-</div>
-      <!-- Hero Section -->
-      <section
-class="relative overflow-hidden pt-12 md:pt-24 pb-12 md:pb-32 bg-[#0B0B0B]">
-<div class="absolute inset-0">
-
-    <div
-        class="absolute w-[500px] h-[500px] bg-[#C4A46B]/10 blur-[160px] -top-32 -left-32">
-    </div>
-
-    <div
-        class="absolute w-[500px] h-[500px] bg-white/5 blur-[180px] bottom-0 right-0">
-    </div>
-
-</div>
-        <div
-          class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center"
+  <body>
+    <!-- ========== NAVBAR ========== -->
+    <nav
+      class="navbar navbar-expand-lg sticky-top bg-white/95 shadow-sm"
+      style="
+        backdrop-filter: blur(6px);
+        border-bottom: 1px solid var(--border-soft);
+      "
+    >
+      <div class="container">
+        <a
+          class="navbar-brand fw-bold text-uppercase"
+          href="#"
+          style="font-size: 1.5rem"
+          >Wacabookstore</a
         >
-          <!-- Gambar - Posisi paling atas di mobile -->
-          <div class="order-1 lg:order-2 flex justify-center">
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-2">
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom" href="#">Philosophy</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom" href="#">Government</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-custom fw-bold border-bottom border-primary pb-1"
+                href="#"
+                >About</a
+              >
+            </li>
+            <li class="nav-item d-flex align-items-center">
+              <a
+                class="nav-link nav-link-custom d-flex align-items-center"
+                href="#"
+                id="cartToggle"
+                role="button"
+              >
+                <i class="bi bi-cart3 fs-5"></i>
+                <span class="cart-badge ms-1" id="cartCount">0</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom" href="#"
+                ><i class="bi bi-person-circle fs-5"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ========== HERO ========== -->
+    <header class="paper-texture position-relative overflow-hidden pt-5 pb-4">
+      <div class="container py-md-5">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-7">
+            <span
+              class="badge bg-transparent text-uppercase small fw-semibold"
+              style="color: #80281b; letter-spacing: 0.15rem"
+              >Our Philosophy</span
+            >
+            <h1 class="hero-title display-4 fw-bold mt-3 mb-4 lh-1">
+              A Sanctuary for the <br class="d-none d-md-block" />Modern
+              Intellectual.
+            </h1>
+            <p class="fs-5 text-muted-soft" style="max-width: 540px">
+              Wacabookstore was founded on a singular premise: that the
+              preservation of human thought is an act of civic and cultural
+              duty. We curate collections that challenge, inspire, and anchor
+              the curious mind.
+            </p>
+            <div class="d-flex flex-wrap gap-3 mt-4">
+              <a href="#books" class="btn btn-primary-dark px-5 py-3"
+                >Explore Collections</a
+              >
+              <a href="#" class="btn btn-outline-primary-dark px-5 py-3"
+                >View Archive</a
+              >
+            </div>
+          </div>
+          <div class="col-lg-5 mt-4 mt-lg-0 position-relative">
             <div
-              class="relative w-full max-w-[280px] md:max-w-md aspect-square bg-white rounded-[32px] md:rounded-[48px] overflow-hidden soft-shadow rotate-0 md:rotate-3 hover:rotate-0 transition-transform duration-500 mx-auto"
+              class="bg-surface-soft p-3 border border-soft"
+              style="background: #f6f3f2"
             >
               <img
-                class="w-full h-full object-cover"
-                data-alt="An artistic, high-resolution composition of a tall, aesthetic stack of vintage and modern hardcover books. The books are arranged neatly in a minimalist light-filled studio. The color palette consists of soft creams, deep browns, and muted terracotta. Soft morning sunlight streams through a window, creating long, gentle shadows and highlighting the tactile texture of the paper and linen covers."
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM-9OLuEUYZBObsy3bQbo60-BcYAl9eUFVmhp7MYMF0HoPsApCcLUP7yl-7zerm1yxC0xu5_MaYwd1xoUuF17SrkHILoFs7deAv9zaoVFdy4JoBaTtNnoaU4w1SOO66t240laH9f8LuODyq8xhTNY0R3JSluiNa6eQibt0CbgxpcGOMCYSR1HPHbTpUuBcaKmr7kTp0EKfUNEV9r-Q5zYI7e7ta_w6hPZfpUJ3Sj4LoeXAheA_zrH-vg"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIqS2reLbMagnHOyQ1mBbkrO646j1HhvttGKd7X_4EtLu1jURmrWQ-9Xbq7RUYtOvABg7z9HxGD1MlZMkNoN2PK27R906SQ4NbePPSJe9WSoyLRExmthDhCrXfLjHZWyTrU5Zc3ayKXeeTdeFY4wAbO0soP6d26OnYqpZo2BknkChWzN__zAVPlHViRvexBCVO3OoPTdCBQNghr-ijKb61uvSKg6yHZmJaAyI6LmBN6dmxz27RmkMIJg"
+                alt="Library interior"
+                class="img-fluid w-100"
+                style="height: 360px; object-fit: cover"
               />
-              <div class="absolute inset-0 bg-primary/5"></div>
             </div>
-          </div>
-
-          <!-- Konten Teks - Posisi kedua di mobile -->
-          <div class="order-2 lg:order-1 text-center md:text-left">
-
-    <span
-        class="inline-block px-4 py-2 rounded-full border border-[#C4A46B]/40 text-[#C4A46B] text-sm tracking-widest uppercase mb-4 md:mb-6">
-        Independent Bookstore
-    </span>
-    
-
-    <h1
-        class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl leading-tight font-serif font-bold text-white mb-4 md:mb-6">
-        Membaca Adalah
-        <span class="text-[#C4A46B]">
-            Bentuk Perlawanan.
-        </span>
-    </h1>
-
-    <p
-        class="text-base md:text-lg text-gray-400 leading-7 md:leading-8 max-w-xl mb-6 md:mb-10 mx-auto md:mx-0">
-        WACA menghadirkan buku-buku pilihan mengenai filsafat,
-        politik, sejarah, kritik sosial, serta pemikiran yang
-        menantang cara kita melihat dunia.
-    </p>
-
-    <div class="flex gap-4 flex-wrap justify-center md:justify-start">
-
-        <a href="products/index.html"
-            class="bg-[#C4A46B] text-black px-6 md:px-8 py-3 md:py-4 rounded-xl font-semibold hover:scale-105 transition text-sm md:text-base">
-
-            Jelajahi Buku
-
-        </a>
-
-        <a href="about_us/index.html"
-            class="border border-[#C4A46B] text-[#C4A46B] px-6 md:px-8 py-3 md:py-4 rounded-xl hover:bg-[#C4A46B] hover:text-black transition text-sm md:text-base">
-
-            Tentang Kami
-
-        </a>
-
-    </div>
-
-</div>
-          </div>
-        </div>
-      </section>
-      <section class="py-28 bg-[#111111]">
-
-<div class="max-w-4xl mx-auto text-center px-6">
-
-<p class="text-[#C4A46B] uppercase tracking-[6px] mb-6">
-
-Quote
-
-</p>
-
-<h2 class="text-4xl font-serif leading-relaxed text-white">
-
-"Semakin sedikit rakyat membaca,
-semakin mudah mereka dikendalikan."
-
-</h2>
-
-<p class="mt-8 text-gray-500">
-
-WACA Bookstore
-
-</p>
-
-</div>
-
-</section>
-      <!-- Featured Books Grid -->
-      <section class="py-20 bg-[#0b0b0b]">
-        <div
-          class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop"
-        >
-          <div class="flex justify-between items-end mb-12">
-            <div>
-              <span
-                class="text-label-bold font-label-bold text-[#D4A373] uppercase tracking-widest block mb-2"
-                >Koleksi Terpilih</span
-              >
-              <h2
-                class="text-headline-lg-mobile md:text-headline-lg font-headline-lg text-primary"
-              >
-                Rekomendasi Minggu Ini
-              </h2>
-            </div>
-            <a
-              class="hidden md:flex items-center gap-2 text-primary font-bold hover:underline"
-              href="#"
-            >
-              Lihat Semua
-              <span class="material-symbols-outlined">arrow_forward</span>
-            </a>
-          </div>
-          <div
-            class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-gutter"
-          >
-            <!-- Book Card 1 -->
             <div
-              class="group bg-white rounded-[24px] p-4 soft-shadow hover:-translate-y-2 transition-all duration-300"
+              class="bg-white p-4 shadow-sm border position-absolute d-none d-md-block"
+              style="bottom: -20px; left: -30px; max-width: 240px"
             >
-              <div
-                class="aspect-[3/4] rounded-xl overflow-hidden mb-4 bg-surface-container"
-              >
-                <img
-                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  data-alt="Close-up of a classic literature book cover on a wooden desk. The book has elegant gold-embossed typography on a dark navy blue spine. Beside it lies a pair of reading glasses and a dried leaf. The lighting is moody and intellectual, emphasizing a calm discovery atmosphere. Colors are deep blues, rich browns, and warm cream highlights."
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCP0mWFbOfbcGnXE6BbpmzETnvIv5YLyO2C89pVJmei4VOgcLOQCaAkQdwCuJbgSiXY7FK8iekHh_ZqrUoP8R3vroKpPyzcM_4fts2PK3NectVALeC5U3KLSs7M6f4lgkIFhsupl8vCuiu-elLaOJc_4ZpSiEgBq32KGYSl83PrY178xtzuPIHD34-YOThUfDGxo6vjsJd3zfL5DDZZetDKcTBicB4eVQFOSTBKFxegp1NBjDvHaK4Fug"
-                />
-              </div>
-              <div class="space-y-1">
-                <div
-                  class="bg-secondary-container px-2 py-0.5 rounded-full inline-block mb-2"
-                >
-                  <span
-                    class="text-[10px] font-label-bold text-on-secondary-container uppercase"
-                    >Sastra</span
-                  >
-                </div>
-                <h3
-                  class="text-headline-md font-headline-md text-primary line-clamp-1"
-                >
-                  Senja di Jakarta
-                </h3>
-                <p class="text-body-sm font-body-sm text-on-surface-variant">
-                  Mochtar Lubis
-                </p>
-                <p class="text-primary font-bold pt-2">Rp 45.000</p>
-              </div>
-            </div>
-            <!-- Book Card 2 -->
-            <div
-              class="group bg-white rounded-[24px] p-4 soft-shadow hover:-translate-y-2 transition-all duration-300"
-            >
-              <div
-                class="aspect-[3/4] rounded-xl overflow-hidden mb-4 bg-surface-container"
-              >
-                <img
-                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  data-alt="A modern minimalist book cover with abstract geometric shapes in earth tones. The title is written in a clean serif font. The book is placed on a pristine white surface with a slight ambient shadow. High-key lighting makes the image feel airy and contemporary, aligning with the modern used bookstore aesthetic. Palette is cream, tan, and dark brown."
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7QM7THxKDeVbeaq7XL8yDGrIMvWi4a43uxBSqNgdv1qOCR677qN4_z4SbCezk6tBNLKe4XtJKs65ATi1Na5kY8auS6nF0W5QzXc4CTgJF6Ir6F-wLgpGq2fnyevPViHXco6PNu-KFNdnYa1lLAouEKBiHM_lvfu1ttnLkpOzT9goBA5QlioZUbW79PzVkV2no3eY58xLhsv8dCozE_xIX_irMOYJE4f5z0yMErz_JWeoFVJshJFFhNg"
-                />
-              </div>
-              <div class="space-y-1">
-                <div
-                  class="bg-secondary-container px-2 py-0.5 rounded-full inline-block mb-2"
-                >
-                  <span
-                    class="text-[10px] font-label-bold text-on-secondary-container uppercase"
-                    >Filosofi</span
-                  >
-                </div>
-                <h3
-                  class="text-headline-md font-headline-md text-primary line-clamp-1"
-                >
-                  Filosofi Teras
-                </h3>
-                <p class="text-body-sm font-body-sm text-on-surface-variant">
-                  Henry Manampiring
-                </p>
-                <p class="text-primary font-bold pt-2">Rp 55.000</p>
-              </div>
-            </div>
-            <!-- Book Card 3 -->
-            <div
-              class="group bg-white rounded-[24px] p-4 soft-shadow hover:-translate-y-2 transition-all duration-300"
-            >
-              <div
-                class="aspect-[3/4] rounded-xl overflow-hidden mb-4 bg-surface-container"
-              >
-                <img
-                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  data-alt="A vintage style book cover with intricate botanical illustrations. The book is surrounded by soft natural elements like a sprig of lavender. The setting is a cozy corner of a rustic library with warm wood textures. The visual style is tactile and nostalgic, invoking the scent of paper and old ink. Lighting is soft and directional."
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCozUXG3y1fOc8bkDyE9j9_lR9Jrpc11rULP2MWFjqXx33pKsEr4WRAHu_YVlikB5z5yFb2nU9LCBl44b5deYLFO7s3aoW-Stjj2Ih34fjrU6Sz-0dKaC8Tfa_HH624jKglwmrOvRaegriTJLW0D7_XgvXt6RJlVfBjAzH92Ib4Wy_9GW35U7bbF-UXixAbsoq-hlOC3i-Gtr2UNUz-XWxZX2R2fsTiPLwGQ33NGmaprr8bKHay131c7w"
-                />
-              </div>
-              <div class="space-y-1">
-                <div
-                  class="bg-secondary-container px-2 py-0.5 rounded-full inline-block mb-2"
-                >
-                  <span
-                    class="text-[10px] font-label-bold text-on-secondary-container uppercase"
-                    >Sejarah</span
-                  >
-                </div>
-                <h3
-                  class="text-headline-md font-headline-md text-primary line-clamp-1"
-                >
-                  Bumi Manusia
-                </h3>
-                <p class="text-body-sm font-body-sm text-on-surface-variant">
-                  Pramoedya Ananta Toer
-                </p>
-                <p class="text-primary font-bold pt-2">Rp 65.000</p>
-              </div>
-            </div>
-            <!-- Book Card 4 -->
-            <div
-              class="group bg-white rounded-[24px] p-4 soft-shadow hover:-translate-y-2 transition-all duration-300"
-            >
-              <div
-                class="aspect-[3/4] rounded-xl overflow-hidden mb-4 bg-surface-container"
-              >
-                <img
-                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  data-alt="A collection of diverse books stacked on a minimalist white shelf. The focus is on a single book with a bright, clean cover design. The lighting is bright and modern, creating a light-mode aesthetic. The composition uses generous white space and soft shadows to give a sense of calm discovery and professional curation."
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKg38fvVAELd_aefkAyz1qhKFtEhGf_0kDztvvxrmctbtmRAqvcJy0CJBiVQZ0svmgAq1BG3XwA5LrrRUttHB2dtZfFOQuyNYKQKUTbqynLJO7AKC8HPGChq_5ay5Lmv3rtXCrgnHtTRJtZE5R035FEl7voubE_n_3aV8Cgdaa0rAzxbXcPjgN7ep3cQMi0uPRUK0Kk0zhFT4ndM4Vxi8eicMnyYTpYdLmqkm7Rj17q1yR0PWR-uDU_g"
-                />
-              </div>
-              <div class="space-y-1">
-                <div
-                  class="bg-secondary-container px-2 py-0.5 rounded-full inline-block mb-2"
-                >
-                  <span
-                    class="text-[10px] font-label-bold text-on-secondary-container uppercase"
-                    >Pengembangan Diri</span
-                  >
-                </div>
-                <h3
-                  class="text-headline-md font-headline-md text-primary line-clamp-1"
-                >
-                  Atomic Habits
-                </h3>
-                <p class="text-body-sm font-body-sm text-on-surface-variant">
-                  James Clear
-                </p>
-                <p class="text-primary font-bold pt-2">Rp 70.000</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Kenapa Memilih Kami Section -->
-      <section class="py-24 px-margin-mobile md:px-margin-desktop bg-[#111111]">
-        <div class="max-w-container-max mx-auto text-center mb-16">
-          <h2
-            class="text-headline-lg-mobile md:text-headline-lg font-headline-lg text-primary mb-4"
-          >
-            Kenapa Memilih Kami
-          </h2>
-          <div class="w-20 h-1 bg-primary mx-auto rounded-full"></div>
-        </div>
-        <div
-          class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
-        >
-          <!-- Feature 1 -->
-          <div
-            class="bg-white p-8 rounded-[32px] soft-shadow flex flex-col items-center text-center group hover:bg-[#38220F] transition-colors duration-500"
-          >
-            <div
-              class="w-16 h-16 bg-[#ECE0D1] rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary-container transition-colors duration-500"
-            >
-              <span
-                class="material-symbols-outlined text-primary text-3xl group-hover:text-on-primary-container"
-                >menu_book</span
-              >
-            </div>
-            <h3
-              class="text-headline-md font-headline-md text-primary mb-3 group-hover:text-white"
-            >
-              Buku Berkualitas
-            </h3>
-            <p
-              class="text-body-sm font-body-sm text-on-surface-variant group-hover:text-on-primary-fixed-variant"
-            >
-              Setiap buku melalui proses kurasi ketat untuk memastikan kelayakan
-              baca.
-            </p>
-          </div>
-          <!-- Feature 2 -->
-          <div
-            class="bg-white p-8 rounded-[32px] soft-shadow flex flex-col items-center text-center group hover:bg-[#38220F] transition-colors duration-500"
-          >
-            <div
-              class="w-16 h-16 bg-[#ECE0D1] rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary-container transition-colors duration-500"
-            >
-              <span
-                class="material-symbols-outlined text-primary text-3xl group-hover:text-on-primary-container"
-                >sell</span
-              >
-            </div>
-            <h3
-              class="text-headline-md font-headline-md text-primary mb-3 group-hover:text-white"
-            >
-              Harga Terjangkau
-            </h3>
-            <p
-              class="text-body-sm font-body-sm text-on-surface-variant group-hover:text-on-primary-fixed-variant"
-            >
-              Nikmati koleksi buku favorit dengan harga yang sangat bersahabat.
-            </p>
-          </div>
-          <!-- Feature 3 -->
-          <div
-            class="bg-white p-8 rounded-[32px] soft-shadow flex flex-col items-center text-center group hover:bg-[#38220F] transition-colors duration-500"
-          >
-            <div
-              class="w-16 h-16 bg-[#ECE0D1] rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary-container transition-colors duration-500"
-            >
-              <span
-                class="material-symbols-outlined text-primary text-3xl group-hover:text-on-primary-container"
-                >local_shipping</span
-              >
-            </div>
-            <h3
-              class="text-headline-md font-headline-md text-primary mb-3 group-hover:text-white"
-            >
-              Pengiriman Cepat
-            </h3>
-            <p
-              class="text-body-sm font-body-sm text-on-surface-variant group-hover:text-on-primary-fixed-variant"
-            >
-              Sistem logistik terintegrasi menjamin buku sampai tepat waktu.
-            </p>
-          </div>
-          <!-- Feature 4 -->
-          <div
-            class="bg-white p-8 rounded-[32px] soft-shadow flex flex-col items-center text-center group hover:bg-[#38220F] transition-colors duration-500"
-          >
-            <div
-              class="w-16 h-16 bg-[#ECE0D1] rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary-container transition-colors duration-500"
-            >
-              <span
-                class="material-symbols-outlined text-primary text-3xl group-hover:text-on-primary-container"
-                >sentiment_satisfied</span
-              >
-            </div>
-            <h3
-              class="text-headline-md font-headline-md text-primary mb-3 group-hover:text-white"
-            >
-              Pelayanan Ramah
-            </h3>
-            <p
-              class="text-body-sm font-body-sm text-on-surface-variant group-hover:text-on-primary-fixed-variant"
-            >
-              Tim admin kami siap membantu Anda menemukan buku yang dicari.
-            </p>
-          </div>
-        </div>
-      </section>
-      <!-- Newsletter / CTA -->
-      <section class="py-20">
-        <div
-          class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop"
-        >
-          <div
-            class="bg-[#38220F] rounded-[48px] p-12 md:p-20 text-white relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-12"
-          >
-            <div class="relative z-10 max-w-xl text-center lg:text-left">
-              <h2 class="text-headline-lg font-headline-lg mb-6">
-                Dapatkan Update Koleksi Terbaru
-              </h2>
-              <p class="text-body-lg opacity-80 mb-0">
-                Jadilah yang pertama tahu saat koleksi buku langka kami tiba
-                kembali di rak digital.
+              <p class="fst-italic mb-0 small text-muted-soft">
+                “The library is a temple of memory where the dead talk to the
+                living.”
               </p>
             </div>
-            <div class="relative z-10 w-full max-w-md">
-              <form class="flex flex-col sm:flex-row gap-4">
-                <input
-                  class="flex-1 bg-white/10 border border-white/20 rounded-xl px-6 py-4 focus:bg-white/20 focus:outline-none placeholder:text-white/50 text-white"
-                  placeholder="Email Anda"
-                  type="email"
-                />
-                <button
-                  class="bg-[#D4A373] text-[#38220F] font-bold px-8 py-4 rounded-xl hover:bg-white transition-colors"
-                >
-                  Daftar
-                </button>
-              </form>
-            </div>
-            <!-- Decorative Circle -->
-            <div
-              class="absolute -right-20 -bottom-20 w-80 h-80 bg-[#D4A373]/10 rounded-full blur-3xl"
-            ></div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <!-- Footer -->
-    <footer
-      class="bg-surface-container w-full py-12 md:py-20 px-margin-mobile md:px-margin-desktop border-t border-outline-variant"
-    >
-      <div
-        class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-gutter"
-      >
-        <div class="col-span-1 md:col-span-1">
-          <div
-            class="text-headline-md font-headline-md font-black text-primary mb-6"
-          >
-            Wacabookstore
-          </div>
-          <p class="text-body-sm text-on-surface-variant leading-relaxed">
-            © 2024 Wacabookstore. Modern bibliophilia for the digital age.
-            Menyediakan jendela ke dunia melalui halaman-halaman terpilih.
-          </p>
-        </div>
-        <div>
-          <h4
-            class="font-label-bold text-label-bold text-primary uppercase mb-6"
-          >
-            Navigasi
-          </h4>
-          <ul class="space-y-4">
-            <li>
-              <a
-                class="text-body-sm text-on-surface-variant hover:text-primary transition-colors"
-                href="#"
-                >Katalog Buku</a
-              >
-            </li>
-            <li>
-              <a
-                class="text-body-sm text-on-surface-variant hover:text-primary transition-colors"
-                href="#"
-                >Penulis Populer</a
-              >
-            </li>
-            <li>
-              <a
-                class="text-body-sm text-on-surface-variant hover:text-primary transition-colors"
-                href="#"
-                >Promo Spesial</a
-              >
-            </li>
-            <li>
-              <a
-                class="text-body-sm text-on-surface-variant hover:text-primary transition-colors"
-                href="#"
-                >Blog Buku</a
-              >
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h4
-            class="font-label-bold text-label-bold text-primary uppercase mb-6"
-          >
-            Bantuan
-          </h4>
-          <ul class="space-y-4">
-            <li>
-              <a
-                class="text-body-sm text-on-surface-variant hover:text-primary transition-colors"
-                href="#"
-                >Privacy Policy</a
-              >
-            </li>
-            <li>
-              <a
-                class="text-body-sm text-on-surface-variant hover:text-primary transition-colors"
-                href="#"
-                >Terms of Service</a
-              >
-            </li>
-            <li>
-              <a
-                class="text-body-sm text-on-surface-variant hover:text-primary transition-colors"
-                href="#"
-                >Shipping Info</a
-              >
-            </li>
-            <li>
-              <a
-                class="text-body-sm text-on-surface-variant hover:text-primary transition-colors"
-                href="#"
-                >Returns</a
-              >
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h4
-            class="font-label-bold text-label-bold text-primary uppercase mb-6"
-          >
-            Ikuti Kami
-          </h4>
-          <div class="flex gap-4 mb-6">
-            <a
-              class="w-10 h-10 rounded-full bg-white flex items-center justify-center soft-shadow hover:bg-primary hover:text-white transition-all"
-              href="#"
-            >
-              <span class="material-symbols-outlined text-lg">share</span>
-            </a>
-            <a
-              class="w-10 h-10 rounded-full bg-white flex items-center justify-center soft-shadow hover:bg-primary hover:text-white transition-all"
-              href="#"
-            >
-              <span class="material-symbols-outlined text-lg">public</span>
-            </a>
-            <a
-              class="w-10 h-10 rounded-full bg-white flex items-center justify-center soft-shadow hover:bg-primary hover:text-white transition-all"
-              href="#"
-            >
-              <span class="material-symbols-outlined text-lg">chat_bubble</span>
-            </a>
-          </div>
-          <div
-            class="flex items-center gap-2 text-body-sm text-on-surface-variant"
-          >
-            <span class="material-symbols-outlined text-primary">mail</span>
-            halo@wacabookstore.com
           </div>
         </div>
       </div>
-      <div
-        class="max-w-container-max mx-auto mt-16 pt-8 border-t border-outline-variant text-center"
-      >
-        <p
-          class="text-label-bold font-label-bold text-on-surface-variant opacity-60"
-        >
-          Handcrafted with care for fellow book lovers.
-        </p>
+    </header>
+
+    <!-- ========== MISSION ========== -->
+    <section class="bg-surface-soft py-5">
+      <div class="container py-4">
+        <h2 class="section-title text-center display-6 mb-5">Our Mission</h2>
+        <div class="row g-4 text-start">
+          <div class="col-md-4">
+            <div class="d-flex flex-column align-items-start">
+              <i class="bi bi-clock-history fs-1" style="color: #80281b"></i>
+              <h5 class="serif fw-semibold mt-3">Preserving Heritage</h5>
+              <p class="text-muted-soft">
+                In an era of fleeting digital content, we stand as a bastion for
+                the physical word. Safeguarding intellectual heritage from
+                ancient stoicism to modern political theory.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="d-flex flex-column align-items-start">
+              <i class="bi bi-scale fs-1" style="color: #80281b"></i>
+              <h5 class="serif fw-semibold mt-3">Intellectual Rigor</h5>
+              <p class="text-muted-soft">
+                We do not merely sell books; we curate discourse. Every title is
+                vetted for its contribution to human understanding, governance,
+                and the philosophical condition.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="d-flex flex-column align-items-start">
+              <i class="bi bi-chat-dots fs-1" style="color: #80281b"></i>
+              <h5 class="serif fw-semibold mt-3">A Shared Dialogue</h5>
+              <p class="text-muted-soft">
+                Wacabookstore bridges the historical archive and contemporary
+                citizen. Fostering a community of thinkers who value structured
+                authority and reasoned argument.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== BOOKS COLLECTION (GOVERNMENT & SEJARAH) ========== -->
+    <section id="books" class="py-5 paper-texture">
+      <div class="container py-4">
+        <div class="row mb-4">
+          <div class="col-12 text-center">
+            <h2 class="section-title display-6">
+              Koleksi Pemerintah &amp; Sejarah
+            </h2>
+            <p class="text-muted-soft">
+              Edisi langka, akademik, dan kuratorial
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-4" id="bookList">
+          <!-- buku 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card card-hover h-100 border-0 shadow-sm">
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2QZ9wvO4aCQbqMEBxmk7p4p7h0-eMKD16KpDEdWHWaOCNszwMAu-h0SLPdlgI4Une41gSNjkZBv5E_UVSKDPqgb45h41JtuWcVnY7hbpjDnJoS_Ec4JoxwtoeBmxMhKEDxrW2IVElIwyaC2EuR5TTf9hpQmihVmXplqqPMCQlmobh-FgqZJlHZrRbupE7WkO1NtylgaMcA0DPowYAcsRSoIbcM7XLqcHrktPbJ0557m6wxcB-W1pnPQ"
+                class="card-img-top"
+                alt="Buku leather-bound"
+                style="height: 200px; object-fit: cover"
+              />
+              <div class="card-body">
+                <span class="badge badge-outline mb-2">Governance</span>
+                <h5 class="card-title serif fw-bold">
+                  The Leviathan &amp; The State
+                </h5>
+                <p class="card-text text-muted-soft small">
+                  Thomas Hobbes · Edisi Anotasi
+                </p>
+                <p class="card-text"><strong>Rp 385.000</strong></p>
+                <button
+                  class="btn btn-sm btn-outline-primary-dark add-to-cart"
+                  data-title="The Leviathan &amp; The State"
+                  data-price="385000"
+                >
+                  Tambah ke Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- buku 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card card-hover h-100 border-0 shadow-sm">
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIqS2reLbMagnHOyQ1mBbkrO646j1HhvttGKd7X_4EtLu1jURmrWQ-9Xbq7RUYtOvABg7z9HxGD1MlZMkNoN2PK27R906SQ4NbePPSJe9WSoyLRExmthDhCrXfLjHZWyTrU5Zc3ayKXeeTdeFY4wAbO0soP6d26OnYqpZo2BknkChWzN__zAVPlHViRvexBCVO3OoPTdCBQNghr-ijKb61uvSKg6yHZmJaAyI6LmBN6dmxz27RmkMIJg"
+                class="card-img-top"
+                alt="Buku sejarah"
+                style="height: 200px; object-fit: cover"
+              />
+              <div class="card-body">
+                <span class="badge badge-outline mb-2">History</span>
+                <h5 class="card-title serif fw-bold">
+                  The Rise of Modern Indonesia
+                </h5>
+                <p class="card-text text-muted-soft small">
+                  M.C. Ricklefs · Revisi 2022
+                </p>
+                <p class="card-text"><strong>Rp 420.000</strong></p>
+                <button
+                  class="btn btn-sm btn-outline-primary-dark add-to-cart"
+                  data-title="The Rise of Modern Indonesia"
+                  data-price="420000"
+                >
+                  Tambah ke Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- buku 3 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card card-hover h-100 border-0 shadow-sm">
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIqS2reLbMagnHOyQ1mBbkrO646j1HhvttGKd7X_4EtLu1jURmrWQ-9Xbq7RUYtOvABg7z9HxGD1MlZMkNoN2PK27R906SQ4NbePPSJe9WSoyLRExmthDhCrXfLjHZWyTrU5Zc3ayKXeeTdeFY4wAbO0soP6d26OnYqpZo2BknkChWzN__zAVPlHViRvexBCVO3OoPTdCBQNghr-ijKb61uvSKg6yHZmJaAyI6LmBN6dmxz27RmkMIJg"
+                class="card-img-top"
+                alt="Buku politik"
+                style="height: 200px; object-fit: cover"
+              />
+              <div class="card-body">
+                <span class="badge badge-outline mb-2">Political Theory</span>
+                <h5 class="card-title serif fw-bold">
+                  Democracy &amp; Its Critics
+                </h5>
+                <p class="card-text text-muted-soft small">
+                  Robert Dahl · Edisi Klasik
+                </p>
+                <p class="card-text"><strong>Rp 340.000</strong></p>
+                <button
+                  class="btn btn-sm btn-outline-primary-dark add-to-cart"
+                  data-title="Democracy &amp; Its Critics"
+                  data-price="340000"
+                >
+                  Tambah ke Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- buku 4 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card card-hover h-100 border-0 shadow-sm">
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIqS2reLbMagnHOyQ1mBbkrO646j1HhvttGKd7X_4EtLu1jURmrWQ-9Xbq7RUYtOvABg7z9HxGD1MlZMkNoN2PK27R906SQ4NbePPSJe9WSoyLRExmthDhCrXfLjHZWyTrU5Zc3ayKXeeTdeFY4wAbO0soP6d26OnYqpZo2BknkChWzN__zAVPlHViRvexBCVO3OoPTdCBQNghr-ijKb61uvSKg6yHZmJaAyI6LmBN6dmxz27RmkMIJg"
+                class="card-img-top"
+                alt="Buku sejarah diplomasi"
+                style="height: 200px; object-fit: cover"
+              />
+              <div class="card-body">
+                <span class="badge badge-outline mb-2">Diplomacy</span>
+                <h5 class="card-title serif fw-bold">
+                  A Diplomatic History of Asia
+                </h5>
+                <p class="card-text text-muted-soft small">
+                  Michael Leifer · Terjemahan
+                </p>
+                <p class="card-text"><strong>Rp 475.000</strong></p>
+                <button
+                  class="btn btn-sm btn-outline-primary-dark add-to-cart"
+                  data-title="A Diplomatic History of Asia"
+                  data-price="475000"
+                >
+                  Tambah ke Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- buku 5 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card card-hover h-100 border-0 shadow-sm">
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIqS2reLbMagnHOyQ1mBbkrO646j1HhvttGKd7X_4EtLu1jURmrWQ-9Xbq7RUYtOvABg7z9HxGD1MlZMkNoN2PK27R906SQ4NbePPSJe9WSoyLRExmthDhCrXfLjHZWyTrU5Zc3ayKXeeTdeFY4wAbO0soP6d26OnYqpZo2BknkChWzN__zAVPlHViRvexBCVO3OoPTdCBQNghr-ijKb61uvSKg6yHZmJaAyI6LmBN6dmxz27RmkMIJg"
+                class="card-img-top"
+                alt="Buku konstitusi"
+                style="height: 200px; object-fit: cover"
+              />
+              <div class="card-body">
+                <span class="badge badge-outline mb-2">Constitution</span>
+                <h5 class="card-title serif fw-bold">The Federalist Papers</h5>
+                <p class="card-text text-muted-soft small">
+                  Hamilton, Madison, Jay · Anotasi
+                </p>
+                <p class="card-text"><strong>Rp 290.000</strong></p>
+                <button
+                  class="btn btn-sm btn-outline-primary-dark add-to-cart"
+                  data-title="The Federalist Papers"
+                  data-price="290000"
+                >
+                  Tambah ke Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- buku 6 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card card-hover h-100 border-0 shadow-sm">
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIqS2reLbMagnHOyQ1mBbkrO646j1HhvttGKd7X_4EtLu1jURmrWQ-9Xbq7RUYtOvABg7z9HxGD1MlZMkNoN2PK27R906SQ4NbePPSJe9WSoyLRExmthDhCrXfLjHZWyTrU5Zc3ayKXeeTdeFY4wAbO0soP6d26OnYqpZo2BknkChWzN__zAVPlHViRvexBCVO3OoPTdCBQNghr-ijKb61uvSKg6yHZmJaAyI6LmBN6dmxz27RmkMIJg"
+                class="card-img-top"
+                alt="Buku sejarah Indonesia"
+                style="height: 200px; object-fit: cover"
+              />
+              <div class="card-body">
+                <span class="badge badge-outline mb-2">History</span>
+                <h5 class="card-title serif fw-bold">
+                  Revolusi: Indonesia &amp; the Birth
+                </h5>
+                <p class="card-text text-muted-soft small">
+                  David Van Reybrouck
+                </p>
+                <p class="card-text"><strong>Rp 510.000</strong></p>
+                <button
+                  class="btn btn-sm btn-outline-primary-dark add-to-cart"
+                  data-title="Revolusi: Indonesia &amp; the Birth"
+                  data-price="510000"
+                >
+                  Tambah ke Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CART SIDEBAR / SUMMARY ========== -->
+    <div class="container mb-5" id="cartSection">
+      <div class="row justify-content-end">
+        <div class="col-lg-6">
+          <div class="cart-summary" id="cartSummary">
+            <div class="d-flex justify-content-between align-items-center">
+              <h5 class="serif fw-bold mb-0">
+                <i class="bi bi-cart3 me-2"></i>Keranjang
+              </h5>
+              <span
+                class="badge bg-primary-dark rounded-pill px-3 py-2"
+                id="cartTotalItems"
+                >0 item</span
+              >
+            </div>
+            <hr />
+            <div id="cartItems" class="mb-3">
+              <p class="text-muted-soft small">Belum ada buku di keranjang.</p>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fw-bold">Total:</span>
+              <span class="fs-5 fw-bold" id="cartTotalPrice">Rp 0</span>
+            </div>
+            <a
+              href="#"
+              class="btn btn-primary-dark w-100 mt-3 py-2"
+              id="whatsappCheckoutBtn"
+            >
+              <i class="bi bi-whatsapp me-2"></i> Checkout via WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== CONTACT / ARCHIVE ========== -->
+    <section class="bg-surface-soft py-5 border-top">
+      <div class="container">
+        <div class="row g-5 align-items-start">
+          <div class="col-md-4">
+            <h3 class="serif fw-bold">Contact the Archive</h3>
+            <p class="text-muted-soft">
+              Kurator kami siap membantu koleksi dan konsultasi.
+            </p>
+            <div class="mt-4">
+              <div class="d-flex align-items-center gap-3 mb-2">
+                <i
+                  class="bi bi-envelope fs-5"
+                  style="color: var(--on-secondary-fixed-variant)"
+                ></i>
+                <span>curator@wacabookstore.org</span>
+              </div>
+              <div class="d-flex align-items-center gap-3">
+                <i
+                  class="bi bi-geo-alt fs-5"
+                  style="color: var(--on-secondary-fixed-variant)"
+                ></i>
+                <span>12 Heritage Lane, Oxford, UK</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <form id="contactForm">
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <label
+                    class="small text-uppercase fw-semibold text-muted-soft"
+                    >Nama Lengkap</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control border-0 border-bottom rounded-0 px-0 bg-transparent"
+                    placeholder="e.g. John Locke"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label
+                    class="small text-uppercase fw-semibold text-muted-soft"
+                    >Minat Akademik</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control border-0 border-bottom rounded-0 px-0 bg-transparent"
+                    placeholder="e.g. Political Theory"
+                  />
+                </div>
+                <div class="col-12">
+                  <label
+                    class="small text-uppercase fw-semibold text-muted-soft"
+                    >Inquiry</label
+                  >
+                  <textarea
+                    class="form-control border-0 border-bottom rounded-0 px-0 bg-transparent"
+                    rows="3"
+                    placeholder="How may we assist your research?"
+                  ></textarea>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-primary-dark px-5 py-2" type="submit">
+                    Dispatch Message
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-white border-top py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="footer-brand fs-3 fw-bold">wacabookstore</div>
+            <p class="text-muted-soft small">
+              © 2024 Wacabookstore. Curating the intellectual heritage of
+              humanity.
+            </p>
+          </div>
+          <div class="col-md-2">
+            <h6 class="fw-bold small text-uppercase">Collections</h6>
+            <ul class="list-unstyled small">
+              <li><a href="#">Philosophy</a></li>
+              <li><a href="#">Political Theory</a></li>
+              <li><a href="#">Academic Journals</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <h6 class="fw-bold small text-uppercase">Support</h6>
+            <ul class="list-unstyled small">
+              <li><a href="#">Shipping &amp; Returns</a></li>
+              <li><a href="#">Contact Archive</a></li>
+              <li><a href="#">Newsletter</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <h6 class="fw-bold small text-uppercase">Connect</h6>
+            <div class="d-flex gap-3 fs-5">
+              <a href="#"><i class="bi bi-share"></i></a>
+              <a href="#"><i class="bi bi-rss"></i></a>
+            </div>
+            <p class="small text-muted-soft mt-3 fst-italic">
+              Established MCMXCIX.
+            </p>
+          </div>
+        </div>
       </div>
     </footer>
+
+    <!-- ========== WHATSAPP FLOAT ========== -->
+    <a href="#" class="whatsapp-float" id="whatsappFloatBtn">
+      <i class="bi bi-whatsapp"></i> Chat via WA
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
     <script src="script.js"></script>
   </body>
 </html>
