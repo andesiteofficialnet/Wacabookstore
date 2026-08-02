@@ -75,7 +75,7 @@
   }
 
   function redirectWhatsApp() {
-    const phone = "6281234567890"; // ganti dengan nomor WA tujuan
+    const phone = "628813564384";
     const msg = buildWhatsAppMessage();
     const url = `https://wa.me/${phone}?text=${msg}`;
     window.open(url, "_blank");
