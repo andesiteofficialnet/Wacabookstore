@@ -2,7 +2,7 @@
   "use strict";
 
   // ====== KONFIGURASI ======
-  const WA_PHONE = "6281234567890"; // ganti dengan nomor WhatsApp tujuan (format: 62xxxxxxxxxx)
+  const WA_PHONE = "628813564384"; // ganti dengan nomor WhatsApp tujuan (format: 62xxxxxxxxxx)
   const CART_STORAGE_KEY = "wacabookstore_cart";
 
   // ====== STORAGE HELPERS (persist lintas halaman) ======
