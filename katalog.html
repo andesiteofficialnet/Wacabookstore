@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Katalog Buku · Wacabookstore</title>
+    <!-- Bootstrap 5 + Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- Google Fonts (serif + sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;600;700&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ========== NAVBAR ========== -->
+    <nav
+      class="navbar navbar-expand-lg sticky-top bg-white/95 shadow-sm"
+      style="
+        backdrop-filter: blur(6px);
+        border-bottom: 1px solid var(--border-soft);
+      "
+    >
+      <div class="container">
+        <a
+          class="navbar-brand fw-bold text-uppercase"
+          href="index.html"
+          style="font-size: 1.5rem"
+          >Wacabookstore</a
+        >
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-2">
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-custom fw-bold border-bottom border-primary pb-1"
+                href="katalog.html"
+                >Katalog Buku</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom" href="katalog.html#books"
+                >Government</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom" href="index.html#mission"
+                >About</a
+              >
+            </li>
+            <li class="nav-item d-flex align-items-center">
+              <a
+                class="nav-link nav-link-custom d-flex align-items-center"
+                href="#cartSection"
+                id="cartToggle"
+                role="button"
+              >
+                <i class="bi bi-cart3 fs-5"></i>
+                <span class="cart-badge ms-1" id="cartCount">0</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom" href="#"
+                ><i class="bi bi-person-circle fs-5"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ========== PAGE HEADER ========== -->
+    <header class="paper-texture position-relative py-5 border-bottom">
+      <div class="container py-3 text-center">
+        <span
+          class="badge bg-transparent text-uppercase small fw-semibold"
+          style="color: #80281b; letter-spacing: 0.15rem"
+          >Full Collection</span
+        >
+        <h1 class="hero-title display-5 fw-bold mt-3 mb-2">Katalog Buku</h1>
+        <p class="text-muted-soft fs-5 mb-0">
+          Koleksi Pemerintah &amp; Sejarah — edisi langka, akademik, dan
+          kuratorial
+        </p>
+      </div>
+    </header>
+
+    <!-- ========== BOOKS COLLECTION (GOVERNMENT & SEJARAH) ========== -->
+    <section id="books" class="py-5">
+      <div class="container py-4">
+        <!-- Filter kategori -->
+        <div
+          class="d-flex flex-wrap justify-content-center gap-2 mb-5"
+          id="categoryFilter"
+        >
+          <button
+            class="btn btn-sm btn-primary-dark filter-btn active"
+            data-category="all"
+          >
+            Semua
+          </button>
+          <button
+            class="btn btn-sm btn-outline-primary-dark filter-btn"
+            data-category="Governance"
+          >
+            Governance
+          </button>
+          <button
+            class="btn btn-sm btn-outline-primary-dark filter-btn"
+            data-category="History"
+          >
+            History
+          </button>
+          <button
+            class="btn btn-sm btn-outline-primary-dark filter-btn"
+            data-category="Political Theory"
+          >
+            Political Theory
+          </button>
+          <button
+            class="btn btn-sm btn-outline-primary-dark filter-btn"
+            data-category="Diplomacy"
+          >
+            Diplomacy
+          </button>
+          <button
+            class="btn btn-sm btn-outline-primary-dark filter-btn"
+            data-category="Constitution"
+          >
+            Constitution
+          </button>
+        </div>
+
+        <div class="row g-4" id="bookList">
+          <!-- buku 1 -->
+          <div class="col-md-6 col-lg-4 book-item" data-category="Governance">
+            <div class="card card-hover h-100 border-0 shadow-sm">
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2QZ9wvO4aCQbqMEBxmk7p4p7h0-eMKD16KpDEdWHWaOCNszwMAu-h0SLPdlgI4Une41gSNjkZBv5E_UVSKDPqgb45h41JtuWcVnY7hbpjDnJoS_Ec4JoxwtoeBmxMhKEDxrW2IVElIwyaC2EuR5TTf9hpQmihVmXplqqPMCQlmobh-FgqZJlHZrRbupE7WkO1NtylgaMcA0DPowYAcsRSoIbcM7XLqcHrktPbJ0557m6wxcB-W1pnPQ"
+                class="card-img-top"
+                alt="Buku leather-bound"
+                style="height: 200px; object-fit: cover"
+              />
+              <div class="card-body d-flex flex-column">
+                <span class="badge badge-outline mb-2 align-self-start"
+                  >Governance</span
+                >
+                <h5 class="card-title serif fw-bold">
+                  The Leviathan &amp; The State
+                </h5>
+                <p class="card-text text-muted-soft small">
+                  Thomas Hobbes · Edisi Anotasi
+                </p>
+                <p class="card-text"><strong>Rp 385.000</strong></p>
+                <button
+                  class="btn btn-sm btn-outline-primary-dark add-to-cart mt-auto"
+                  data-title="The Leviathan &amp; The State"
+                  data-price="385000"
+                >
+                  <i class="bi bi-cart-plus me-1"></i>Tambah ke Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- buku 2 -->
+          <div class="col-md-6 col-lg-4 book-item" data-category="History">
+            <div class="card card-hover h-100 border-0 shadow-sm">
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIqS2reLbMagnHOyQ1mBbkrO646j1HhvttGKd7X_4EtLu1jURmrWQ-9Xbq7RUYtOvABg7z9HxGD1MlZMkNoN2PK27R906SQ4NbePPSJe9WSoyLRExmthDhCrXfLjHZWyTrU5Zc3ayKXeeTdeFY4wAbO0soP6d26OnYqpZo2BknkChWzN__zAVPlHViRvexBCVO3OoPTdCBQNghr-ijKb61uvSKg6yHZmJaAyI6LmBN6dmxz27RmkMIJg"
+                class="card-img-top"
+                alt="Buku sejarah"
+                style="height: 200px; object-fit: cover"
+              />
+              <div class="card-body d-flex flex-column">
+                <span class="badge badge-outline mb-2 align-self-start"
+                  >History</span
+                >
+                <h5 class="card-title serif fw-bold">
+                  The Rise of Modern Indonesia
+                </h5>
+                <p class="card-text text-muted-soft small">
+                  M.C. Ricklefs · Revisi 2022
+                </p>
+                <p class="card-text"><strong>Rp 420.000</strong></p>
+                <button
+                  class="btn btn-sm btn-outline-primary-dark add-to-cart mt-auto"
+                  data-title="The Rise of Modern Indonesia"
+                  data-price="420000"
+                >
+                  <i class="bi bi-cart-plus me-1"></i>Tambah ke Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- buku 3 -->
+          <div
+            class="col-md-6 col-lg-4 book-item"
+            data-category="Political Theory"
+          >
+            <div class="card card-hover h-100 border-0 shadow-sm">
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIqS2reLbMagnHOyQ1mBbkrO646j1HhvttGKd7X_4EtLu1jURmrWQ-9Xbq7RUYtOvABg7z9HxGD1MlZMkNoN2PK27R906SQ4NbePPSJe9WSoyLRExmthDhCrXfLjHZWyTrU5Zc3ayKXeeTdeFY4wAbO0soP6d26OnYqpZo2BknkChWzN__zAVPlHViRvexBCVO3OoPTdCBQNghr-ijKb61uvSKg6yHZmJaAyI6LmBN6dmxz27RmkMIJg"
+                class="card-img-top"
+                alt="Buku politik"
+                style="height: 200px; object-fit: cover"
+              />
+              <div class="card-body d-flex flex-column">
+                <span class="badge badge-outline mb-2 align-self-start"
+                  >Political Theory</span
+                >
+                <h5 class="card-title serif fw-bold">
+                  Democracy &amp; Its Critics
+                </h5>
+                <p class="card-text text-muted-soft small">
+                  Robert Dahl · Edisi Klasik
+                </p>
+                <p class="card-text"><strong>Rp 340.000</strong></p>
+                <button
+                  class="btn btn-sm btn-outline-primary-dark add-to-cart mt-auto"
+                  data-title="Democracy &amp; Its Critics"
+                  data-price="340000"
+                >
+                  <i class="bi bi-cart-plus me-1"></i>Tambah ke Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- buku 4 -->
+          <div class="col-md-6 col-lg-4 book-item" data-category="Diplomacy">
+            <div class="card card-hover h-100 border-0 shadow-sm">
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIqS2reLbMagnHOyQ1mBbkrO646j1HhvttGKd7X_4EtLu1jURmrWQ-9Xbq7RUYtOvABg7z9HxGD1MlZMkNoN2PK27R906SQ4NbePPSJe9WSoyLRExmthDhCrXfLjHZWyTrU5Zc3ayKXeeTdeFY4wAbO0soP6d26OnYqpZo2BknkChWzN__zAVPlHViRvexBCVO3OoPTdCBQNghr-ijKb61uvSKg6yHZmJaAyI6LmBN6dmxz27RmkMIJg"
+                class="card-img-top"
+                alt="Buku sejarah diplomasi"
+                style="height: 200px; object-fit: cover"
+              />
+              <div class="card-body d-flex flex-column">
+                <span class="badge badge-outline mb-2 align-self-start"
+                  >Diplomacy</span
+                >
+                <h5 class="card-title serif fw-bold">
+                  A Diplomatic History of Asia
+                </h5>
+                <p class="card-text text-muted-soft small">
+                  Michael Leifer · Terjemahan
+                </p>
+                <p class="card-text"><strong>Rp 475.000</strong></p>
+                <button
+                  class="btn btn-sm btn-outline-primary-dark add-to-cart mt-auto"
+                  data-title="A Diplomatic History of Asia"
+                  data-price="475000"
+                >
+                  <i class="bi bi-cart-plus me-1"></i>Tambah ke Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- buku 5 -->
+          <div class="col-md-6 col-lg-4 book-item" data-category="Constitution">
+            <div class="card card-hover h-100 border-0 shadow-sm">
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIqS2reLbMagnHOyQ1mBbkrO646j1HhvttGKd7X_4EtLu1jURmrWQ-9Xbq7RUYtOvABg7z9HxGD1MlZMkNoN2PK27R906SQ4NbePPSJe9WSoyLRExmthDhCrXfLjHZWyTrU5Zc3ayKXeeTdeFY4wAbO0soP6d26OnYqpZo2BknkChWzN__zAVPlHViRvexBCVO3OoPTdCBQNghr-ijKb61uvSKg6yHZmJaAyI6LmBN6dmxz27RmkMIJg"
+                class="card-img-top"
+                alt="Buku konstitusi"
+                style="height: 200px; object-fit: cover"
+              />
+              <div class="card-body d-flex flex-column">
+                <span class="badge badge-outline mb-2 align-self-start"
+                  >Constitution</span
+                >
+                <h5 class="card-title serif fw-bold">The Federalist Papers</h5>
+                <p class="card-text text-muted-soft small">
+                  Hamilton, Madison, Jay · Anotasi
+                </p>
+                <p class="card-text"><strong>Rp 290.000</strong></p>
+                <button
+                  class="btn btn-sm btn-outline-primary-dark add-to-cart mt-auto"
+                  data-title="The Federalist Papers"
+                  data-price="290000"
+                >
+                  <i class="bi bi-cart-plus me-1"></i>Tambah ke Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- buku 6 -->
+          <div class="col-md-6 col-lg-4 book-item" data-category="History">
+            <div class="card card-hover h-100 border-0 shadow-sm">
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIqS2reLbMagnHOyQ1mBbkrO646j1HhvttGKd7X_4EtLu1jURmrWQ-9Xbq7RUYtOvABg7z9HxGD1MlZMkNoN2PK27R906SQ4NbePPSJe9WSoyLRExmthDhCrXfLjHZWyTrU5Zc3ayKXeeTdeFY4wAbO0soP6d26OnYqpZo2BknkChWzN__zAVPlHViRvexBCVO3OoPTdCBQNghr-ijKb61uvSKg6yHZmJaAyI6LmBN6dmxz27RmkMIJg"
+                class="card-img-top"
+                alt="Buku sejarah Indonesia"
+                style="height: 200px; object-fit: cover"
+              />
+              <div class="card-body d-flex flex-column">
+                <span class="badge badge-outline mb-2 align-self-start"
+                  >History</span
+                >
+                <h5 class="card-title serif fw-bold">
+                  Revolusi: Indonesia &amp; the Birth
+                </h5>
+                <p class="card-text text-muted-soft small">
+                  David Van Reybrouck
+                </p>
+                <p class="card-text"><strong>Rp 510.000</strong></p>
+                <button
+                  class="btn btn-sm btn-outline-primary-dark add-to-cart mt-auto"
+                  data-title="Revolusi: Indonesia &amp; the Birth"
+                  data-price="510000"
+                >
+                  <i class="bi bi-cart-plus me-1"></i>Tambah ke Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p
+          class="text-center text-muted-soft small mt-4 d-none"
+          id="emptyFilterMsg"
+        >
+          Tidak ada buku pada kategori ini.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== CART SIDEBAR / CHECKOUT ========== -->
+    <section class="bg-surface-soft py-5 border-top" id="cartSection">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-7">
+            <div class="cart-summary" id="cartSummary">
+              <div class="d-flex justify-content-between align-items-center">
+                <h5 class="serif fw-bold mb-0">
+                  <i class="bi bi-cart3 me-2"></i>Keranjang Belanja
+                </h5>
+                <span
+                  class="badge bg-primary-dark rounded-pill px-3 py-2"
+                  id="cartTotalItems"
+                  >0 item</span
+                >
+              </div>
+              <hr />
+              <div id="cartItems" class="mb-3">
+                <p class="text-muted-soft small mb-0">
+                  Belum ada buku di keranjang.
+                </p>
+              </div>
+              <div
+                class="d-flex justify-content-between align-items-center border-top pt-3"
+              >
+                <span class="fw-bold">Total:</span>
+                <span class="fs-5 fw-bold" id="cartTotalPrice">Rp 0</span>
+              </div>
+              <div
+                id="checkoutError"
+                class="text-danger small mt-2 d-none"
+              ></div>
+              <a
+                href="#"
+                class="btn btn-primary-dark w-100 mt-3 py-2"
+                id="whatsappCheckoutBtn"
+              >
+                <i class="bi bi-whatsapp me-2"></i> Checkout via WhatsApp
+              </a>
+              <p class="text-muted-soft small text-center mt-2 mb-0">
+                Anda akan diarahkan ke WhatsApp untuk konfirmasi pesanan.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-white border-top py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="footer-brand fs-3 fw-bold">wacabookstore</div>
+            <p class="text-muted-soft small">
+              © 2024 Wacabookstore. Curating the intellectual heritage of
+              humanity.
+            </p>
+          </div>
+          <div class="col-md-2">
+            <h6 class="fw-bold small text-uppercase">Collections</h6>
+            <ul class="list-unstyled small">
+              <li><a href="katalog.html">Philosophy</a></li>
+              <li><a href="katalog.html">Political Theory</a></li>
+              <li><a href="katalog.html">Academic Journals</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <h6 class="fw-bold small text-uppercase">Support</h6>
+            <ul class="list-unstyled small">
+              <li><a href="#">Shipping &amp; Returns</a></li>
+              <li><a href="index.html#mission">Contact Archive</a></li>
+              <li><a href="#">Newsletter</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <h6 class="fw-bold small text-uppercase">Connect</h6>
+            <div class="d-flex gap-3 fs-5">
+              <a href="#"><i class="bi bi-share"></i></a>
+              <a href="#"><i class="bi bi-rss"></i></a>
+            </div>
+            <p class="small text-muted-soft mt-3 fst-italic">
+              Established MCMXCIX.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ========== WHATSAPP FLOAT ========== -->
+    <a href="#" class="whatsapp-float" id="whatsappFloatBtn">
+      <i class="bi bi-whatsapp"></i> Chat via WA
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
